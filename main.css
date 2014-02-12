@@ -17,7 +17,16 @@ h3{
 	margin:auto;
 	width: 45em;
 }
+
+canvas{
+	position: absolute;
+	left:0;
+	right:0;
+	margin-left:auto;
+	margin-right:auto;
+}
 p{
+	/*need to customize margin so diver doesn't disappear*/
 	margin:auto;
 	width: 35em;
 }
