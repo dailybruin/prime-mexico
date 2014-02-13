@@ -1,6 +1,7 @@
 <html>
 <link rel="stylesheet" type="text/css" href="main.css" media="screen" />
-<script src="http://www.chartjs.org/assets/Chart.js"></script>
+<!--<script src="http://www.chartjs.org/assets/Chart.js"></script>-->
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <head>
 	<title>Coming up for Air</title>
 	</head>
@@ -9,8 +10,38 @@
 		<br>
 		<h3><em>Here's how you dive for langosta, the spiny lobster: in a full, black neoprene wetsuit, slip on your flippers, pull on your goggles, bite down on your respirator, and jump in the water. Then, angle your body down and swim, in brazas - broad strokes - until you're 10 or 12 or more deep, somewhere between 50-100 feet below the surface and with the water bearing down at pressures triple or quadruple sea level. Spiny lobsters have no claws, and hide en masse in caves or man-made casitas. Once you've hooked a couple kilograms or more, with a fish or two as well, tug on the line for your partner to draw the line back up to the boat. Slowly float up to the surface. Rest for twenty minutes. Repeat.</em></h3>
 		<br>
+	<script type="text/javascript">
+	/*why you no work?
+		google.load("visualization","1", {packages:["corechart"]});
+		google.setOnLoadCallback(drawChart);
 
-	<!--places CO chart -->
+		function drawChart(){
+
+			var data = google.visualization.arrayToDataTable([
+				['Name','Before','After',],
+				['Ada Beatriz',9.5,4.25],
+				['Cristo',27.75,9],
+				['Didier Amaury',37,15.25],
+				['Julissa',19,5],
+				['Vivianita',4,2],
+				['Yvonne',13.5,3.5],
+				['7 Mares',68,10.25],
+				]);
+			var options ={
+				title: 'Carbon Monoxide levels before and after the intervention'
+				hAxis:{title: 'CO Parts per million (PPM)'}
+				vAxis:{title: 'Boat name'}
+				isStacked: true,
+				animation: {duration: 1000, easing: 'out'},
+
+			};
+
+			var chart = new google.visualizaton.ColumnChart(document.getElementById('chart_div'));
+			chart.draw(data, options)
+		}*/
+		</script>
+		<!--<div id ="chart_div" style="width: 30em; height: 30 em"></div>-->
+	<?/*?><!--places CO chart -->
 	<canvas id="COchart" width="400" height="400"></canvas>
 
 	<!-- meat/data for CO chart -->
@@ -34,7 +65,7 @@
 	}
 	new Chart(ctx).Bar(data);
 	</script>
-
+<?*/?>
 <p>In winter, the water stays warm off the Yucat&aacute;n coast, which curves up into the Gulf of Mexico above Belize and Guatemala. On the north end of the peninsula, fishermen whistle hellos from their motorbikes along the waterfront road in R&iacute;o Lagartos, a village of about 3,500, two and a half hours and a world away from Cancún.<br><br>
 Here, everyone walks in the streets, past brightly colored houses adorned with flamingos and tributes to the Virgin Mary. The clock tower chimes on the 33rd minute of every hour, crowds holler at evening volleyball games in the town center, and most everyone is a fisherman, or related to one.<br><br>
 Yet many of these fishermen make their living below the surface of the ocean. Six days a week, in black neoprene wetsuits, men scour the ocean floor, hooking lobster, sea cucumber, octopus and red grouper &mdash; 130 or 150 pounds of marine protein when the sea feels most generous. But she who giveth, taketh away. These men risk their health and safety with each dive.<br><br>
