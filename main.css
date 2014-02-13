@@ -12,6 +12,11 @@ body {
 	color: #E6E6E6;
 }
 
+#container {
+	margin: 40px auto;
+	width: 800px;
+}
+
 h1 {
 	text-align: center;
 }
@@ -19,7 +24,6 @@ h1 {
 h3 {
 	font-style: italic;
 	margin: auto;
-	width: 45em;
 }
 
 canvas {
@@ -33,7 +37,6 @@ canvas {
 p {
 	/*need to customize margin so diver doesn't disappear*/
 	margin: 20px auto;
-	width: 35em;
 }
 
 .divider {
