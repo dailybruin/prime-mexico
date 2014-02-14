@@ -15,9 +15,8 @@
 
 	<body>
 		<header>
-			<video autoplay="" loop="" poster="true">
-				<source id="mp4source" src="http://zippy.gfycat.com/AlertSpicyBlueandgoldmackaw.mp4" type="video/mp4" class="mp4source">
-				<source id="webmsource" src="http://zippy.gfycat.com/AlertSpicyBlueandgoldmackaw.webm" type="video/webm" class="webmsource">
+			<video autoplay="autoplay" loop="loop" muted="muted" poster="assets/img/yucatan.jpg">
+				<source id="mp4source" src="assets/yucatan.mp4" type="video/mp4" media="(min-width:600px)"><!--Only load this for non-mobile-->
 			</video>
 		</header>
 
@@ -27,40 +26,40 @@
 				Here's how you dive for langosta, the spiny lobster: in a full, black neoprene wetsuit, slip on your flippers, pull on your goggles, bite down on your respirator, and jump in the water. Then, angle your body down and swim, in brazas - broad strokes - until you're 10 or 12 or more deep, somewhere between 50-100 feet below the surface and with the water bearing down at pressures triple or quadruple sea level. Spiny lobsters have no claws, and hide en masse in caves or man-made casitas. Once you've hooked a couple kilograms or more, with a fish or two as well, tug on the line for your partner to draw the line back up to the boat. Slowly float up to the surface. Rest for twenty minutes. Repeat.
 			</h3>
 
-	<script type="text/javascript">
-	
-		google.load("visualization","1", {packages:["corechart"]});
-		google.setOnLoadCallback(drawChart);
+			<script type="text/javascript">
 
-		function drawChart(){
+				google.load("visualization","1", {packages:["corechart"]});
+				google.setOnLoadCallback(drawChart);
 
-			var data = google.visualization.arrayToDataTable([
-				['Name','Before','After',],
-				['Ada Beatriz',9.5,4.25],
-				['Cristo',27.75,9],
-				['Didier Amaury',37,15.25],
-				['Julissa',19,5],
-				['Vivianita',4,2],
-				['Yvonne',13.5,3.5],
-				['7 Mares',68,10.25],
-			]);
+				function drawChart(){
 
-			var options ={
-				title: 'Carbon Monoxide levels before and after the intervention',
-				hAxis:{title: 'CO Parts per million (PPM)'},
-				vAxis:{title: 'Boat name'},
-				isStacked: true,
-				animation: {duration: 1000, easing: 'out'},
+					var data = google.visualization.arrayToDataTable([
+						['Name','Before','After',],
+						['Ada Beatriz',9.5,4.25],
+						['Cristo',27.75,9],
+						['Didier Amaury',37,15.25],
+						['Julissa',19,5],
+						['Vivianita',4,2],
+						['Yvonne',13.5,3.5],
+						['7 Mares',68,10.25],
+					]);
 
-			};
+					var options ={
+						title: 'Carbon Monoxide levels before and after the intervention',
+						hAxis:{title: 'CO Parts per million (PPM)'},
+						vAxis:{title: 'Boat name'},
+						isStacked: true,
+						animation: {duration: 1000, easing: 'out'},
 
-			var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-			chart.draw(data, options);
-		}
-		</script>
+					};
+
+					var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+					chart.draw(data, options);
+				}
+			</script>
 
 			<div id="chart_div"></div>
-	
+
 			<p>
 				In winter, the water stays warm off the Yucat&aacute;n coast, which curves up into the Gulf of Mexico above Belize and Guatemala. On the north end of the peninsula, fishermen whistle hellos from their motorbikes along the waterfront road in R&iacute;o Lagartos, a village of about 3,500, two and a half hours and a world away from Canc&uacute;n.
 			</p>
