@@ -51,3 +51,12 @@ p {
 .divider {
 	text-align: center;
 }
+
+img.inline {
+	display: block;
+}
+
+img.inline.right {
+	float: right;
+	margin-left: 1em;
+}
