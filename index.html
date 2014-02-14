@@ -15,9 +15,8 @@
 
 	<body>
 		<header>
-			<video autoplay="" loop="" poster="true">
-				<source id="mp4source" src="http://zippy.gfycat.com/AlertSpicyBlueandgoldmackaw.mp4" type="video/mp4" class="mp4source">
-				<source id="webmsource" src="http://zippy.gfycat.com/AlertSpicyBlueandgoldmackaw.webm" type="video/webm" class="webmsource">
+			<video autoplay="autoplay" loop="loop" muted="muted" poster="assets/img/yucatan.jpg">
+				<source id="mp4source" src="assets/yucatan.mp4" type="video/mp4" media="(min-width:600px)"><!--Only load this for non-mobile-->
 			</video>
 		</header>
 
@@ -59,7 +58,6 @@
 		</script>
 		<!--<div id ="chart_div" style="width: 30em; height: 30 em"></div>-->
 	<?/*?><!--places CO chart -->
-	<canvas id="COchart" width="400" height="400"></canvas>
 
 	<!-- meat/data for CO chart -->
 	<script>

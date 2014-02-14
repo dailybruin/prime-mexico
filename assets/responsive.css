@@ -1,13 +1,27 @@
 /* Landscape phones and down */
 @media (max-width: 480px) {
     #container {
-        width: 95%;
+        width: 90%;
     }
 }
 
 @media (min-width: 481px) and (max-width: 599px) {
     #container {
         width: 440px;
+    }
+}
+
+@media (max-width: 599px) {
+    header {
+        background-image: url(img/yucatan.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 300px;
+        width: 100%;
+    }
+
+    video {
+        display: none;
     }
 }
 
