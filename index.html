@@ -21,7 +21,7 @@
 			</h3>
 
 	<script type="text/javascript">
-	/*why you no work?
+	
 		google.load("visualization","1", {packages:["corechart"]});
 		google.setOnLoadCallback(drawChart);
 
@@ -36,47 +36,24 @@
 				['Vivianita',4,2],
 				['Yvonne',13.5,3.5],
 				['7 Mares',68,10.25],
-				]);
+			]);
+
 			var options ={
-				title: 'Carbon Monoxide levels before and after the intervention'
-				hAxis:{title: 'CO Parts per million (PPM)'}
-				vAxis:{title: 'Boat name'}
+				title: 'Carbon Monoxide levels before and after the intervention',
+				hAxis:{title: 'CO Parts per million (PPM)'},
+				vAxis:{title: 'Boat name'},
 				isStacked: true,
 				animation: {duration: 1000, easing: 'out'},
 
 			};
 
-			var chart = new google.visualizaton.ColumnChart(document.getElementById('chart_div'));
-			chart.draw(data, options)
-		}*/
+			var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+			chart.draw(data, options);
+		}
 		</script>
-		<!--<div id ="chart_div" style="width: 30em; height: 30 em"></div>-->
-	<?/*?><!--places CO chart -->
-	<canvas id="COchart" width="400" height="400"></canvas>
 
-	<!-- meat/data for CO chart -->
-	<script>
-	var ctx = document.getElementById('COchart').getContext('2d');
-
-	var data = {
-		labels : ["Ada Beatriz","Cristo","Didier Amaury","Julissa","Vivianita","Yvonne","7 Mares"],
-		datasets : [
-			{
-				fillColor : "rgba(220,220,220,1)",
-				strokeColor : "rgba(220,342,142,1)",
-				data : [9.5,27.75,37,19,4,13.5,68]
-			},
-			{
-				fillColor : "rgba(120,220,220,1)",
-				strokeColor : "rgba(260,142,242,1)",
-				data : [4.25,9,15.25,5,2,3.5,10.25]
-			}
-		]
-	}
-	new Chart(ctx).Bar(data);
-	</script>
-<?*/?>
-
+			<div id="chart_div"></div>
+	
 			<p>
 				In winter, the water stays warm off the Yucat&aacute;n coast, which curves up into the Gulf of Mexico above Belize and Guatemala. On the north end of the peninsula, fishermen whistle hellos from their motorbikes along the waterfront road in R&iacute;o Lagartos, a village of about 3,500, two and a half hours and a world away from Canc&uacute;n.
 			</p>
