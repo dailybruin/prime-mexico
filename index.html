@@ -26,61 +26,39 @@
 				Here's how you dive for langosta, the spiny lobster: in a full, black neoprene wetsuit, slip on your flippers, pull on your goggles, bite down on your respirator, and jump in the water. Then, angle your body down and swim, in brazas - broad strokes - until you're 10 or 12 or more deep, somewhere between 50-100 feet below the surface and with the water bearing down at pressures triple or quadruple sea level. Spiny lobsters have no claws, and hide en masse in caves or man-made casitas. Once you've hooked a couple kilograms or more, with a fish or two as well, tug on the line for your partner to draw the line back up to the boat. Slowly float up to the surface. Rest for twenty minutes. Repeat.
 			</h3>
 
-	<script type="text/javascript">
-	/*why you no work?
-		google.load("visualization","1", {packages:["corechart"]});
-		google.setOnLoadCallback(drawChart);
+			<script type="text/javascript">
 
-		function drawChart(){
+				google.load("visualization","1", {packages:["corechart"]});
+				google.setOnLoadCallback(drawChart);
 
-			var data = google.visualization.arrayToDataTable([
-				['Name','Before','After',],
-				['Ada Beatriz',9.5,4.25],
-				['Cristo',27.75,9],
-				['Didier Amaury',37,15.25],
-				['Julissa',19,5],
-				['Vivianita',4,2],
-				['Yvonne',13.5,3.5],
-				['7 Mares',68,10.25],
-				]);
-			var options ={
-				title: 'Carbon Monoxide levels before and after the intervention'
-				hAxis:{title: 'CO Parts per million (PPM)'}
-				vAxis:{title: 'Boat name'}
-				isStacked: true,
-				animation: {duration: 1000, easing: 'out'},
+				function drawChart(){
 
-			};
+					var data = google.visualization.arrayToDataTable([
+						['Name','Before','After',],
+						['Ada Beatriz',9.5,4.25],
+						['Cristo',27.75,9],
+						['Didier Amaury',37,15.25],
+						['Julissa',19,5],
+						['Vivianita',4,2],
+						['Yvonne',13.5,3.5],
+						['7 Mares',68,10.25],
+					]);
 
-			var chart = new google.visualizaton.ColumnChart(document.getElementById('chart_div'));
-			chart.draw(data, options)
-		}*/
-		</script>
-		<!--<div id ="chart_div" style="width: 30em; height: 30 em"></div>-->
-	<?/*?><!--places CO chart -->
+					var options ={
+						title: 'Carbon Monoxide levels before and after the intervention',
+						hAxis:{title: 'CO Parts per million (PPM)'},
+						vAxis:{title: 'Boat name'},
+						isStacked: true,
+						animation: {duration: 1000, easing: 'out'},
 
-	<!-- meat/data for CO chart -->
-	<script>
-	var ctx = document.getElementById('COchart').getContext('2d');
+					};
 
-	var data = {
-		labels : ["Ada Beatriz","Cristo","Didier Amaury","Julissa","Vivianita","Yvonne","7 Mares"],
-		datasets : [
-			{
-				fillColor : "rgba(220,220,220,1)",
-				strokeColor : "rgba(220,342,142,1)",
-				data : [9.5,27.75,37,19,4,13.5,68]
-			},
-			{
-				fillColor : "rgba(120,220,220,1)",
-				strokeColor : "rgba(260,142,242,1)",
-				data : [4.25,9,15.25,5,2,3.5,10.25]
-			}
-		]
-	}
-	new Chart(ctx).Bar(data);
-	</script>
-<?*/?>
+					var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+					chart.draw(data, options);
+				}
+			</script>
+
+			<div id="chart_div"></div>
 
 			<p>
 				In winter, the water stays warm off the Yucat&aacute;n coast, which curves up into the Gulf of Mexico above Belize and Guatemala. On the north end of the peninsula, fishermen whistle hellos from their motorbikes along the waterfront road in R&iacute;o Lagartos, a village of about 3,500, two and a half hours and a world away from Canc&uacute;n.
@@ -171,6 +149,7 @@
 				The problem boiled down to geometry, so Chin came up with a relatively easy fix: attach a long tube to the compressor's intake, a snorkel rising above the exhaust, to ensure divers breathe clean air. Tests done at UCLA showed significant improvements in air quality, and all the parts for the intervention were bought for about $20 at Home Depot.
 			</p>
 			<p>
+				<img src="assets/img/Engine.gif"/>
 				"It has to be painless and easy for them," Chin said. "Or they won't do it."
 			</p>
 			<p>
@@ -203,6 +182,8 @@
 			<p>
 				"They walk around with very old, very used equipment, and it's foreseeable that some of it's going to fail," Chin said.
 			</p>
+
+
 			<p class="divider">
 				***
 			</p>
