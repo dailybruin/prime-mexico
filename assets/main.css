@@ -6,11 +6,9 @@ header {
 	position: fixed;
 }
 
-/* TODO: look into maintaining aspect ratio */
 video {
 	object-fit: fill;
 	width: 100%;
-	height: 100%;
 }
 
 #container {
@@ -77,8 +75,8 @@ img.inline.right {
 
 div.gallery-img {
 	width: 70px;
-	height: 100px; 
-	overflow: hidden; 
+	height: 100px;
+	overflow: hidden;
 	margin: 0.3em;
 	opacity: 0.90;
 }
@@ -93,4 +91,4 @@ div.gallery-img:hover {
 
 #photo-gallery td {
 	text-align:center;
-} 
+}
