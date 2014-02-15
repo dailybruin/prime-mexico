@@ -1,0 +1,28 @@
+google.load("visualization","1", {packages:["corechart"]});
+google.setOnLoadCallback(drawChart);
+
+function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+        ['Name','After','Before'],
+        ['Ada Beatriz',4.25,{v:5.25, f:'9.5'}],
+        ['Cristo',9,{v:18.75, f:'27.75'}],
+        ['Didier Amaury',15.25,{v:21.75, f:'37'}],
+        ['Julissa',5,{v:14, f:'19'}],
+        ['Vivianita',2,{v:2, f:'4'}],
+        ['Yvonne',3.5,{v:10, f:'13.5'}],
+        ['7 Mares',10.25,{v:57.75, f:'68'}],
+    ]);
+
+    var options ={
+        title: 'Carbon Monoxide levels on each boat before and after the intervention',
+        hAxis: {title: 'CO Parts per million (PPM)', viewWindow: {max:70} },
+        isStacked: true,
+        animation: {duration: 1000, easing: 'out'},
+        backgroundColor: {fill:'transparent', stroke: '#000000', strokeWidth: 5},
+        height: 400,
+        width: 500,
+    };
+
+    var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+}
