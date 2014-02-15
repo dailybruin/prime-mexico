@@ -23,7 +23,7 @@ video {
 	background:         linear-gradient(to bottom, rgb(105,166,188) 0%, rgb(20,51,91) 100%);
 	color: #E6E6E6;
 	position: absolute;
-	top: 400px; /* TODO: look into dynamically changing this; */
+	top: 400px; /* dynamically changed in main.js */
 	width: 100%;
 }
 
