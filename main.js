@@ -10,4 +10,10 @@ window.onload = function() {
     window.onresize = function() {
         repositionContainer();
     }
+
+    var video_overlay = document.getElementById('video-overlay');
+    window.onscroll = function() {
+        var alpha = window.scrollY / video.offsetHeight; // A ratio of how far it has scrolled
+        video_overlay.style.opacity = alpha;
+    }
 }
