@@ -14,8 +14,8 @@ function drawChart(){
     ]);
 
 var options ={
-    title: 'Carbon Monoxide levels on each boat before and after the intervention',
-    titleTextStyle: {color: 'white', fontSize: 16, bold: true},
+    title: 'Carbon Monoxide levels on boats before and after the attachment',
+    titleTextStyle: {color: 'white', fontSize: 20, bold: true},
     hAxis: {title: 'CO Parts per million (PPM)', viewWindow: {max:70}, textStyle: {color:'white'}, titleTextStyle: {color: 'white'} },
     vAxis: {gridlines: {color:'white'}, textStyle: {color:'white'}},
     isStacked: true,
