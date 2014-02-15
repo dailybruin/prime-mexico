@@ -8,9 +8,12 @@
 
 		<link rel="stylesheet" type="text/css" href="assets/main.css"/>
 		<link rel="stylesheet" type="text/css" href="assets/responsive.css"/>
+		<link href="assets/lightbox.css" rel="stylesheet" />
 
 		<!--<script src="http://www.chartjs.org/assets/Chart.js"></script>-->
 		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script src="jquery-1.10.2.min.js"></script>
+		<script src="lightbox-2.6.min.js"></script>
 	</head>
 
 	<body>
@@ -26,41 +29,7 @@
 				Here's how you dive for langosta, the spiny lobster: in a full, black neoprene wetsuit, slip on your flippers, pull on your goggles, bite down on your respirator, and jump in the water. Then, angle your body down and swim, in brazas - broad strokes - until you're 10 or 12 or more deep, somewhere between 50-100 feet below the surface and with the water bearing down at pressures triple or quadruple sea level. Spiny lobsters have no claws, and hide en masse in caves or man-made casitas. Once you've hooked a couple kilograms or more, with a fish or two as well, tug on the line for your partner to draw the line back up to the boat. Slowly float up to the surface. Rest for twenty minutes. Repeat.
 			</h3>
 
-			<script type="text/javascript">
-
-				google.load("visualization","1", {packages:["corechart"]});
-				google.setOnLoadCallback(drawChart);
-
-				function drawChart(){
-
-					var data = google.visualization.arrayToDataTable([
-						['Name','After','Before',],
-						['Ada Beatriz',4.25,{v:5.25, f:'9.5'}],
-						['Cristo',9,{v:18.75, f:'27.75'}],
-						['Didier Amaury',15.25,{v:21.75, f:'37'}],
-						['Julissa',5,{v:14, f:'19'}],
-						['Vivianita',2,{v:2, f:'4'}],
-						['Yvonne',3.5,{v:10, f:'13.5'}],
-						['7 Mares',10.25,{v:57.75, f:'68'}],
-					]);
-
-					var options ={
-						title: 'Carbon Monoxide levels on each boat before and after the intervention',
-						hAxis: {title: 'CO Parts per million (PPM)', viewWindow: {max:70} },
-						isStacked: true,
-						animation: {duration: 1000, easing: 'out'},
-						backgroundColor: {fill:'transparent', stroke: '#000000', strokeWidth: 5},
-						height: 400,
-						width: 500,
-						
-					};
-
-					var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
-					chart.draw(data, options);
-				}
-			</script>
-
-			<div id="chart_div"></div>
+			
 
 			<p>
 				In winter, the water stays warm off the Yucat&aacute;n coast, which curves up into the Gulf of Mexico above Belize and Guatemala. On the north end of the peninsula, fishermen whistle hellos from their motorbikes along the waterfront road in R&iacute;o Lagartos, a village of about 3,500, two and a half hours and a world away from Canc&uacute;n.
@@ -138,6 +107,109 @@
 			<p class="divider">
 				***
 			</p>
+			
+			<table id="photo-gallery">
+				<caption>Meet the Fisherman (better title)</caption>
+				<tr>
+					<td>
+						<a href="assets/img/Pescadores1.jpg" data-lightbox="gallery" title="Luis Sanchez, 58">
+						<div class="gallery-img" style=" background-image: url('assets/img/Pescadores1.jpg'); background-position: 35% 0%; background-size:145px 200px;"></div>
+						</a>
+						<span>Luis, 58.</span>
+					</td>
+					<td>
+						<a href="assets/img/Pescadores2.jpg" data-lightbox="gallery" title="Julio Cesar, 37">
+						<div class="gallery-img" style=" background-image: url('assets/img/Pescadores2.jpg'); background-position: 50% 0%; background-size:160px 200px;"></div>
+						</a>
+						<span>Julio, 37</span>
+					</td>
+					<td>
+						<a href="assets/img/Pescadores10.jpg" data-lightbox="gallery" title="Emir Sanchez, 36. Son of Luis Sanchez.">
+						<div class="gallery-img" style=" background-image: url('assets/img/Pescadores10.jpg'); background-position: 50% 0%; background-size:170px 200px;"></div>
+						</a>
+						<span>Emir, 36.</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="assets/img/Pescadores13.jpg" data-lightbox="gallery" title="Manuel Alberto,19. Diving since he was 12.">
+						<div class="gallery-img" style=" background-image: url('assets/img/Pescadores13.jpg'); background-position: 18% 5%; background-size:240px 300px;"></div>
+						</a><span>Manuel, 19.</span>
+					</td>
+					<td>
+						<a href="assets/img/Pescadores3.jpg" data-lightbox="gallery" title="Robert Marfil Marfil, 46">
+						<div class="gallery-img" style="background-image: url('assets/img/Pescadores3.jpg'); background-position: 55% 0%; background-size:140px 180px;"></div>
+						</a>
+						<span>Robert, 46.</span>
+					</td>
+					<td>
+						<a href="assets/img/Pescadores4.jpg" data-lightbox="gallery" title="Emmanuel Zamudio, 29">
+						<div class="gallery-img" style="background-image: url('assets/img/Pescadores4.jpg'); background-position: 50% 0%; background-size:165px 200px;"></div>
+						</a><span>Emmanuel, 29.</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="assets/img/Pescadores5.jpg" data-lightbox="gallery" title="Maria Jose, 25. Secretary.">
+						<div class="gallery-img" style="background-image: url('assets/img/Pescadores5.jpg'); background-position: 50% 0%; background-size:150px 200px;"></div>
+						</a>
+						<span>Maria, 25.</span>
+					</td>
+					<td>
+						<a href="assets/img/Pescadores7.jpg" data-lightbox="gallery" title="Flori Alcocer Marfil, 27. Secretary.">
+						<div class="gallery-img" style="background-image: url('assets/img/Pescadores7.jpg'); background-position: 50% 0%; background-size:200px 260px;"></div>
+						</a>
+						<span>Flori, 27.</span>
+					</td>
+					<td>
+						<a href="assets/img/Pescadores14.jpg" data-lightbox="gallery" title="Eric Estrada, 46.">
+						<div class="gallery-img" style=" background-image: url('assets/img/Pescadores14.jpg'); background-position: 52% 0%; background-size:200px 250px;"></div>
+						</a>
+						<span>Eric, 46.</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="assets/img/Pescadores15.jpg" data-lightbox="gallery" title="Miguel Alcocer, 40.">
+						<div class="gallery-img" style="background-image: url('assets/img/Pescadores15.jpg'); background-position: 50% 0%; background-size:150px 200px;"></div>
+						</a>
+						<span>Miguel, 40.</span>
+					</td>
+					<td>
+						<a href="assets/img/Pescadores6.jpg" data-lightbox="gallery" title="Roque Hualeza, 40. Cooperative administrator">
+						<div class="gallery-img" style="background-image: url('assets/img/Pescadores6.jpg'); background-position: 55% 0%; background-size:150px 200px;"></div>
+						</a>
+						<span>Roque, 40.</span>
+					</td>
+					<td>
+						<a href="assets/img/Pescadores8.jpg" data-lightbox="gallery" title="Amauri Marfil. Cooperative president from 2005–2007.">
+						<div class="gallery-img" style="background-image: url('assets/img/Pescadores8.jpg'); background-position: 50% 0%; background-size:150px 200px;"></div>
+						</a>
+						<span>Amauri.</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="assets/img/Pescadores9.jpg" data-lightbox="gallery" title="Eduardo Rajon Puh, 50. Fisherman for 32 years.">
+						<div class="gallery-img" style="background-image: url('assets/img/Pescadores9.jpg'); background-position: 50% 0%; background-size:170px 200px;"></div>
+						</a>
+						<span>Eduardo, 50.</span>
+					</td>
+					<td>
+						<a href="assets/img/Pescadores11.jpg" data-lightbox="gallery" title="Santiago Ricéro Luisa, 47.">
+						<div class="gallery-img" style="background-image: url('assets/img/Pescadores11.jpg'); background-position: 50% 0%; background-size:160px 200px;"></div>
+						</a>
+						<span>Santiago, 47.</span>
+					</td>
+					<td>
+						<a href="assets/img/Pescadores12.jpg" data-lightbox="gallery" title="Cesar Alexander Tun, 36. Cooperative president.">
+						<div class="gallery-img" style="background-image: url('assets/img/Pescadores12.jpg'); background-position: 75% 27%; background-size:320px 450px;"></div>
+						</a>
+						<span>Cesar, 36.</span>
+					</td>
+				</tr>
+			</table>
+			
 			<p>
 				With the lazy easing of the sea, boats bob and lean in rows on either side of the concrete pier in front of the R&iacute;o Lagartos Cooperative, one of two fishing unions in town. On land, the shrill of an electric drill battles with local motorbikes for dominance on a warm Friday morning in January. Chin and two assistants from UCLA, Chris Millbern and Gracelene Wegryzn, arrange biohazard bags filled with nuts and bolts in neat rows on the concrete pier.
 			</p>
@@ -151,7 +223,6 @@
 				The problem boiled down to geometry, so Chin came up with a relatively easy fix: attach a long tube to the compressor's intake, a snorkel rising above the exhaust, to ensure divers breathe clean air. Tests done at UCLA showed significant improvements in air quality, and all the parts for the intervention were bought for about $20 at Home Depot.
 			</p>
 			<p>
-				<img src="assets/img/Engine.gif" class="inline right"/>
 				"It has to be painless and easy for them," Chin said. "Or they won't do it."
 			</p>
 			<p>
@@ -163,6 +234,42 @@
 			<p>
 				In the afternoon, Eduardo Rojcios Puch, 43, putts in on his orange and white scooter, a tribute to Finding Nemo. His boat, the Vivianita, was the first to be fixed up the night before. The carbon monoxide levels in his air compressor, already low, fell by 50 percent, after the snorkel was installed.
 			</p>
+
+			<script type="text/javascript">
+
+				google.load("visualization","1", {packages:["corechart"]});
+				google.setOnLoadCallback(drawChart);
+
+				function drawChart(){
+
+					var data = google.visualization.arrayToDataTable([
+						['Name','After','Before',],
+						['Ada Beatriz',4.25,{v:5.25, f:'9.5'}],
+						['Cristo',9,{v:18.75, f:'27.75'}],
+						['Didier Amaury',15.25,{v:21.75, f:'37'}],
+						['Julissa',5,{v:14, f:'19'}],
+						['Vivianita',2,{v:2, f:'4'}],
+						['Yvonne',3.5,{v:10, f:'13.5'}],
+						['7 Mares',10.25,{v:57.75, f:'68'}],
+					]);
+
+					var options ={
+						title: 'Carbon Monoxide levels on each boat before and after the intervention',
+						hAxis: {title: 'CO Parts per million (PPM)', viewWindow: {max:70} },
+						isStacked: true,
+						animation: {duration: 1000, easing: 'out'},
+						backgroundColor: {fill:'transparent', stroke: '#000000', strokeWidth: 5},
+						height: 400,
+						width: 500,
+						
+					};
+
+					var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+					chart.draw(data, options);
+				}
+			</script>
+
+			<div id="chart_div"></div>
 			<p>
 				"However you look at it, it's good for us," Puch said. "We're the ones diving."
 			</p>
@@ -172,6 +279,7 @@
 			<p>
 				Huchim and Chin found the fishermen exceeded safety recommendations 24 percent of the time. However, most current diving data comes from controlled experiments with Navy SEALs in the 1950s. The formal recommendations apply little to the Yucat&aacute;n fishermen, who have high rates of obesity and dive multiple times a day. Chin and Huchim will use information directly from the computer-recorded dives to help develop specific safety standards for the fishermen.
 			</p>
+			<img src="assets/img/Engine.gif" class="inline right"/>
 			<p>
 				During the season, two of the divers experienced decompression sickness. One died.
 			</p>
