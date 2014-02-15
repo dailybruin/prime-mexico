@@ -91,4 +91,6 @@ div.gallery-img:hover {
 #photo-gallery td {
 	text-align:center;
 } 
->>>>>>> 89e227d8c0490f3d3430bca966405583ce2a634c
+#chart_div {
+	/*width: 90%;*/
+}
