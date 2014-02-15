@@ -74,13 +74,15 @@ img.inline.right {
 	float: right;
 	margin-left: 1em;
 }
+
 div.gallery-img {
 	width: 70px;
 	height: 100px; 
 	overflow: hidden; 
 	margin: 0.3em;
-	opacity: 0.95;
+	opacity: 0.90;
 }
+
 div.gallery-img:hover {
 	opacity: 1;
 }
@@ -88,9 +90,7 @@ div.gallery-img:hover {
 	float:right;
 	margin-right: -100px;
 }
+
 #photo-gallery td {
 	text-align:center;
 } 
-#chart_div {
-	/*width: 90%;*/
-}
