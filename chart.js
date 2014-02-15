@@ -21,16 +21,29 @@ var options ={
     isStacked: true,
     animation: {duration: 1000, easing: 'out'},
     backgroundColor: {fill:'transparent', stroke: '#000000', strokeWidth: 5},
+<<<<<<< HEAD
     height: 400, 
     width: '90%',
     seriesType:"bars",
     series: {2: {type: "line", color: "yellow", focusTarget: 'multiple'}},   
+=======
+    height: 400,
+    width: '90%'
+>>>>>>> 381793b85238b941328817f6aec8df7ecf718516
 };
 
     var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
     chart.draw(data, options);
 
-    window.onresize = function() {
-        chart.draw(data, options);
-    };
+    var main = document.getElementById('main'),
+        main_width = main.offsetWidth;
+
+    // Resize if main's width has changed:
+    var checkForResize = function() {
+        if (main_width !== main.offsetWidth) {
+            main_width = main.offsetWidth;
+            chart.draw(data, options);
+        }
+    }
+    setInterval(checkForResize, 1000);
 }

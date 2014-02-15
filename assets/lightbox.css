@@ -1,6 +1,6 @@
 /* line 7, ../sass/lightbox.sass */
 body:after {
-  content: url(../assets/img/close.png) url(../assets/img/loading.gif) url(../assets/img/prev.png) url(../assets/img/next.png);
+  content: url(../assets/img/prev.png) url(../assets/img/next.png);
   display: none;
 }
 
@@ -66,6 +66,7 @@ body:after {
 /* line 44, ../sass/lightbox.sass */
 .lb-container {
   padding: 4px;
+  position: relative;
 }
 
 /* line 47, ../sass/lightbox.sass */
@@ -85,7 +86,6 @@ body:after {
   width: 32px;
   height: 32px;
   margin: 0 auto;
-  background: url(../assets/img/loading.gif) no-repeat;
 }
 
 /* line 63, ../sass/lightbox.sass */
@@ -159,6 +159,8 @@ body:after {
 
 /* line 103, ../sass/lightbox.sass */
 .lb-data {
+  position: absolute;
+  bottom: 0;
   padding: 0 4px;
   color: #bbbbbb;
 }
@@ -178,7 +180,7 @@ body:after {
 .lb-data .lb-number {
   display: block;
   clear: left;
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
   font-size: 12px;
   color: #999999;
 }
