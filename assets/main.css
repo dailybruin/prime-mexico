@@ -1,4 +1,19 @@
 body {
+	margin: 0;
+}
+
+header {
+	position: fixed;
+}
+
+/* TODO: look into maintaining aspect ratio */
+video {
+	object-fit: fill;
+	width: 100%;
+	height: 100%;
+}
+
+#container {
 	background: rgb(105,166,188); /* Old browsers */
 	/* Consider replacing the IE rule with a static gradient image. This rule is infamously slow. */
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#69a6bc', endColorstr='#14335b', GradientType=0 ); /* IE6-9 */
@@ -9,25 +24,24 @@ body {
 	background:      -o-linear-gradient(top,       rgb(105,166,188) 0%, rgb(20,51,91) 100%); /* Opera 11.10+ */
 	background:         linear-gradient(to bottom, rgb(105,166,188) 0%, rgb(20,51,91) 100%);
 	color: #E6E6E6;
-	margin: 0;
-}
-
-header {
-}
-
-video {
-	object-fit: fill;
+	position: absolute;
+	top: 400px; /* TODO: look into dynamically changing this; */
 	width: 100%;
-	height: 100%;
 }
 
-#container {
+#main {
 	margin: 40px auto;
 	width: 800px;
 }
 
 h1 {
+	font-family: 'Vollkorn', Georgia;
+
+	font: 400 90px/10px 'Vollkorn';
+	font-style: italic;
+
 	text-align: center;
+	text-shadow: 1px 1px 1px #666;
 }
 
 h3 {
