@@ -66,6 +66,7 @@ body:after {
 /* line 44, ../sass/lightbox.sass */
 .lb-container {
   padding: 4px;
+  position: relative;
 }
 
 /* line 47, ../sass/lightbox.sass */
@@ -159,6 +160,8 @@ body:after {
 
 /* line 103, ../sass/lightbox.sass */
 .lb-data {
+  position: absolute;
+  bottom: 0;
   padding: 0 4px;
   color: #bbbbbb;
 }
@@ -178,7 +181,7 @@ body:after {
 .lb-data .lb-number {
   display: block;
   clear: left;
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
   font-size: 12px;
   color: #999999;
 }
