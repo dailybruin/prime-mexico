@@ -11,6 +11,15 @@ video {
 	width: 100%;
 }
 
+#video-overlay {
+	background: rgb(105,166,188);
+	opacity: 0; /* Changed by JS */
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
 #container {
 	background: rgb(105,166,188); /* Old browsers */
 	/* Consider replacing the IE rule with a static gradient image. This rule is infamously slow. */
@@ -23,7 +32,7 @@ video {
 	background:         linear-gradient(to bottom, rgb(105,166,188) 0%, rgb(20,51,91) 100%);
 	color: #E6E6E6;
 	position: absolute;
-	top: 400px; /* TODO: look into dynamically changing this; */
+	top: 400px; /* dynamically changed in main.js */
 	width: 100%;
 }
 
