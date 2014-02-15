@@ -9,10 +9,13 @@
 		<link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,400' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="assets/main.css"/>
 		<link rel="stylesheet" type="text/css" href="assets/responsive.css"/>
+		<link href="assets/lightbox.css" rel="stylesheet" />
 
 		<!--<script src="http://www.chartjs.org/assets/Chart.js"></script>-->
-		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-		<script type="text/javascript" src="main.js"></script>
+		<script src="https://www.google.com/jsapi"></script>
+		<script src="jquery-1.10.2.min.js"></script>
+		<script src="lightbox-2.6.min.js"></script>
+		<script src="main.js"></script>
 	</head>
 
 	<body>
@@ -30,12 +33,10 @@
 				</h3>
 
 				<script type="text/javascript">
-
 					google.load("visualization","1", {packages:["corechart"]});
 					google.setOnLoadCallback(drawChart);
 
 					function drawChart(){
-
 						var data = google.visualization.arrayToDataTable([
 							['Name','Before','After',],
 							['Ada Beatriz',9.5,4.25],
@@ -53,7 +54,6 @@
 							vAxis:{title: 'Boat name'},
 							isStacked: true,
 							animation: {duration: 1000, easing: 'out'},
-
 						};
 
 						var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
@@ -124,14 +124,16 @@
 					Long and spiny, Panulirus argus, the Caribbean spiny lobster, bears little resemblance to its cousins that keep Maine famous. With 10 legs and two sets of antennas, they can grow up to 24 inches long, scuttling along the ocean floor from North Carolina to R&iacute;o de Janeiro.
 				</p>
 				<p>
-				In the 1950s, spiny lobster thrived in shallow waters, and men could dive freely, without any scuba gear, said Silvia Salas, a professor of marine resources in M&eacute;rida. Overfishing gradually pushed the lobster further out to sea, and the fishermen followed.
+					In the 1950s, spiny lobster thrived in shallow waters, and men could dive freely, without any scuba gear, said Silvia Salas, a professor of marine resources in M&eacute;rida. Overfishing gradually pushed the lobster further out to sea, and the fishermen followed.
 				</p>
 				<p>
 					In the 1980s the marine industry exploded as farmers moved to the coast after the industry around henequen &mdash; a type of organic fiber &mdash; collapsed.
 				</p>
 				<p>
 					"All the farmers needed something to do, and begged the government for boats," said Salas, Huchim's adviser. "But some of them didn't know how to swim."</p>
-				</p><p>At the same time, the fishing industry began using the hookah technique, where divers breathe through a respirator connected to an air compressor on the boat by a long plastic tube.
+				</p>
+				<p>
+					At the same time, the fishing industry began using the hookah technique, where divers breathe through a respirator connected to an air compressor on the boat by a long plastic tube.
 				</p>
 				<p>
 					This technology boosted the number of kilos &mdash; and therefore the amount of money &mdash; fishermen could haul in each day. But the relative prosperity has come with a catch: dive to make a living, dive and risk dying.
@@ -139,6 +141,109 @@
 				<p class="divider">
 					***
 				</p>
+
+				<table id="photo-gallery">
+					<caption>Meet the Fisherman (better title)</caption>
+					<tr>
+						<td>
+							<a href="assets/img/Pescadores1.jpg" data-lightbox="gallery" title="Luis Sanchez, 58">
+							<div class="gallery-img" style=" background-image: url('assets/img/Pescadores1.jpg'); background-position: 35% 0%; background-size:145px 200px;"></div>
+							</a>
+							<span>Luis, 58.</span>
+						</td>
+						<td>
+							<a href="assets/img/Pescadores2.jpg" data-lightbox="gallery" title="Julio Cesar, 37">
+							<div class="gallery-img" style=" background-image: url('assets/img/Pescadores2.jpg'); background-position: 50% 0%; background-size:160px 200px;"></div>
+							</a>
+							<span>Julio, 37</span>
+						</td>
+						<td>
+							<a href="assets/img/Pescadores10.jpg" data-lightbox="gallery" title="Emir Sanchez, 36. Son of Luis Sanchez.">
+							<div class="gallery-img" style=" background-image: url('assets/img/Pescadores10.jpg'); background-position: 50% 0%; background-size:170px 200px;"></div>
+							</a>
+							<span>Emir, 36.</span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="assets/img/Pescadores13.jpg" data-lightbox="gallery" title="Manuel Alberto,19. Diving since he was 12.">
+							<div class="gallery-img" style=" background-image: url('assets/img/Pescadores13.jpg'); background-position: 18% 5%; background-size:240px 300px;"></div>
+							</a><span>Manuel, 19.</span>
+						</td>
+						<td>
+							<a href="assets/img/Pescadores3.jpg" data-lightbox="gallery" title="Robert Marfil Marfil, 46">
+							<div class="gallery-img" style="background-image: url('assets/img/Pescadores3.jpg'); background-position: 55% 0%; background-size:140px 180px;"></div>
+							</a>
+							<span>Robert, 46.</span>
+						</td>
+						<td>
+							<a href="assets/img/Pescadores4.jpg" data-lightbox="gallery" title="Emmanuel Zamudio, 29">
+							<div class="gallery-img" style="background-image: url('assets/img/Pescadores4.jpg'); background-position: 50% 0%; background-size:165px 200px;"></div>
+							</a><span>Emmanuel, 29.</span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="assets/img/Pescadores5.jpg" data-lightbox="gallery" title="Maria Jose, 25. Secretary.">
+							<div class="gallery-img" style="background-image: url('assets/img/Pescadores5.jpg'); background-position: 50% 0%; background-size:150px 200px;"></div>
+							</a>
+							<span>Maria, 25.</span>
+						</td>
+						<td>
+							<a href="assets/img/Pescadores7.jpg" data-lightbox="gallery" title="Flori Alcocer Marfil, 27. Secretary.">
+							<div class="gallery-img" style="background-image: url('assets/img/Pescadores7.jpg'); background-position: 50% 0%; background-size:200px 260px;"></div>
+							</a>
+							<span>Flori, 27.</span>
+						</td>
+						<td>
+							<a href="assets/img/Pescadores14.jpg" data-lightbox="gallery" title="Eric Estrada, 46.">
+							<div class="gallery-img" style=" background-image: url('assets/img/Pescadores14.jpg'); background-position: 52% 0%; background-size:200px 250px;"></div>
+							</a>
+							<span>Eric, 46.</span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="assets/img/Pescadores15.jpg" data-lightbox="gallery" title="Miguel Alcocer, 40.">
+							<div class="gallery-img" style="background-image: url('assets/img/Pescadores15.jpg'); background-position: 50% 0%; background-size:150px 200px;"></div>
+							</a>
+							<span>Miguel, 40.</span>
+						</td>
+						<td>
+							<a href="assets/img/Pescadores6.jpg" data-lightbox="gallery" title="Roque Hualeza, 40. Cooperative administrator">
+							<div class="gallery-img" style="background-image: url('assets/img/Pescadores6.jpg'); background-position: 55% 0%; background-size:150px 200px;"></div>
+							</a>
+							<span>Roque, 40.</span>
+						</td>
+						<td>
+							<a href="assets/img/Pescadores8.jpg" data-lightbox="gallery" title="Amauri Marfil. Cooperative president from 2005–2007.">
+							<div class="gallery-img" style="background-image: url('assets/img/Pescadores8.jpg'); background-position: 50% 0%; background-size:150px 200px;"></div>
+							</a>
+							<span>Amauri.</span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="assets/img/Pescadores9.jpg" data-lightbox="gallery" title="Eduardo Rajon Puh, 50. Fisherman for 32 years.">
+							<div class="gallery-img" style="background-image: url('assets/img/Pescadores9.jpg'); background-position: 50% 0%; background-size:170px 200px;"></div>
+							</a>
+							<span>Eduardo, 50.</span>
+						</td>
+						<td>
+							<a href="assets/img/Pescadores11.jpg" data-lightbox="gallery" title="Santiago Ricéro Luisa, 47.">
+							<div class="gallery-img" style="background-image: url('assets/img/Pescadores11.jpg'); background-position: 50% 0%; background-size:160px 200px;"></div>
+							</a>
+							<span>Santiago, 47.</span>
+						</td>
+						<td>
+							<a href="assets/img/Pescadores12.jpg" data-lightbox="gallery" title="Cesar Alexander Tun, 36. Cooperative president.">
+							<div class="gallery-img" style="background-image: url('assets/img/Pescadores12.jpg'); background-position: 75% 27%; background-size:320px 450px;"></div>
+							</a>
+							<span>Cesar, 36.</span>
+						</td>
+					</tr>
+				</table>
+
 				<p>
 					With the lazy easing of the sea, boats bob and lean in rows on either side of the concrete pier in front of the R&iacute;o Lagartos Cooperative, one of two fishing unions in town. On land, the shrill of an electric drill battles with local motorbikes for dominance on a warm Friday morning in January. Chin and two assistants from UCLA, Chris Millbern and Gracelene Wegryzn, arrange biohazard bags filled with nuts and bolts in neat rows on the concrete pier.
 				</p>
@@ -152,7 +257,6 @@
 					The problem boiled down to geometry, so Chin came up with a relatively easy fix: attach a long tube to the compressor's intake, a snorkel rising above the exhaust, to ensure divers breathe clean air. Tests done at UCLA showed significant improvements in air quality, and all the parts for the intervention were bought for about $20 at Home Depot.
 				</p>
 				<p>
-					<img src="assets/img/Engine.gif" class="inline right"/>
 					"It has to be painless and easy for them," Chin said. "Or they won't do it."
 				</p>
 				<p>
@@ -173,6 +277,9 @@
 				<p>
 					Huchim and Chin found the fishermen exceeded safety recommendations 24 percent of the time. However, most current diving data comes from controlled experiments with Navy SEALs in the 1950s. The formal recommendations apply little to the Yucat&aacute;n fishermen, who have high rates of obesity and dive multiple times a day. Chin and Huchim will use information directly from the computer-recorded dives to help develop specific safety standards for the fishermen.
 				</p>
+
+				<img src="assets/img/Engine.gif" class="inline right"/>
+
 				<p>
 					During the season, two of the divers experienced decompression sickness. One died.
 				</p>
@@ -185,8 +292,6 @@
 				<p>
 					"They walk around with very old, very used equipment, and it's foreseeable that some of it's going to fail," Chin said.
 				</p>
-
-
 				<p class="divider">
 					***
 				</p>
@@ -238,7 +343,7 @@
 				<p>
 					"I'm naive, but I'm very persistent," he said. "I think a good five years, I could solve this problem, and then use Yucat&aacute;n as a model for the rest of the country."
 				</p>
-			</div><!--/#main-->
+			<div id="main"><!--/#main-->
 		</div><!--/#container-->
 	</body>
 </html>
