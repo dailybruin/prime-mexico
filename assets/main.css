@@ -1,4 +1,6 @@
 body {
+	background: rgb(105,166,188);
+	color: #E6E6E6;
 	margin: 0;
 }
 
@@ -12,12 +14,20 @@ video {
 }
 
 #video-overlay {
-	background: rgb(105,166,188);
-	opacity: 0; /* Changed by JS */
 	position: absolute;
-	top: 0;
+	bottom: 0;
 	width: 100%;
-	height: 100%;
+}
+
+h1 {
+
+	font-family: 'Vollkorn', Georgia;
+	font: 400 90px 'Vollkorn';
+
+	margin: 0 auto 20px;
+
+	text-align: center;
+	text-shadow: 1px 1px 1px #666;
 }
 
 #container {
@@ -30,7 +40,6 @@ video {
 	background:     -ms-linear-gradient(top,       rgb(105,166,188) 0%, rgb(20,51,91) 100%); /* IE10+ */
 	background:      -o-linear-gradient(top,       rgb(105,166,188) 0%, rgb(20,51,91) 100%); /* Opera 11.10+ */
 	background:         linear-gradient(to bottom, rgb(105,166,188) 0%, rgb(20,51,91) 100%);
-	color: #E6E6E6;
 	position: absolute;
 	top: 400px; /* dynamically changed in main.js */
 	width: 100%;
@@ -39,16 +48,6 @@ video {
 #main {
 	margin: 40px auto;
 	width: 800px;
-}
-
-h1 {
-	font-family: 'Vollkorn', Georgia;
-
-	font: 400 90px/10px 'Vollkorn';
-	font-style: italic;
-
-	text-align: center;
-	text-shadow: 1px 1px 1px #666;
 }
 
 h3 {
@@ -99,6 +98,7 @@ div.gallery-img:hover {
 	opacity: 1;
 }
 #photo-gallery {
+	color: #ffffff;
 	float:right;
 	margin-right: -100px;
 }
