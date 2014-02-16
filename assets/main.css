@@ -111,22 +111,36 @@ figure .credit {
 }
 
 div.gallery-img {
+	margin: 0.3em;
+	float:left;
+}
+
+div.gallery-img div {
 	width: 70px;
 	height: 100px;
 	overflow: hidden;
-	margin: 0.3em;
 	opacity: 0.90;
 }
 
-div.gallery-img:hover {
+div.gallery-img div:hover {
 	opacity: 1;
 }
 #photo-gallery {
+	width: 240px;
 	color: #ffffff;
 	float:right;
 	margin-right: -100px;
+	margin-left: 20px;
+	margin-bottom: 15px;
+	text-align: center;
+	padding: 15px 20px;
+	background-color: rgba(0,0,0, 0.4);
 }
 
-#photo-gallery td {
-	text-align:center;
+#photo-gallery p {
+	margin: 0;
+}
+
+.gallery-img span {
+	font-size: 0.7em;
 }
