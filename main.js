@@ -5,13 +5,17 @@ window.onload = function() {
         video_overlay = document.getElementById('video-overlay'),
         container = document.getElementById('container');
 
+    var ratio = 1280 / 720; // video size
+
     var repositionContainer = function() {
-        container.style.top = video.offsetHeight + 'px';
+        container.style.top = video.offsetHeight;
     };
     repositionContainer();
 
-    var resizePanes = function() {
-        var client_height = document.body.clientHeight;
+    var resizeElements = function() {
+        var client_height = document.body.clientHeight,
+            client_width = document.body.clientWidth;
+
         $('.pane').height(client_height);
 
         // Recenter .pane-centers if necessary:
@@ -19,30 +23,39 @@ window.onload = function() {
             height = $pane_centers.height();
         $pane_centers.css('marginTop', -height / 2);
 
-        // Also resize video_overlay (it's sort of a pane, right?)
-        video_overlay.style.width = document.body.clientWidth;
+        video.style.width = client_width;
+        var additional_width = 0;
+        while (video.offsetHeight < client_height) {
+            additional_width += 100;
+            video.style.width = client_width + additional_width;
+        }
+
+        $('header').height(client_height);
+        video_overlay.style.width = client_width;
     };
-    resizePanes();
+    resizeElements();
 
     window.onresize = function() {
         repositionContainer();
-        resizePanes();
+        resizeElements();
     }
 
     sub_header = document.getElementById('sub-header');
     window.onscroll = function() {
-        var alpha = 1.3 - (window.scrollY / video.offsetHeight); // A ratio of how far it has scrolled
+        var alpha = 1.2 - (window.scrollY / video.offsetHeight); // A ratio of how far it has scrolled
         video.style.opacity = alpha;
 
         video_overlay.style.bottom = window.scrollY * 1.333;
 
-        if (window.scrollY >= video.offsetHeight) {
+        if (window.scrollY >= $('header').height()) {
             sub_header.style.position = 'fixed';
         }
         else {
             sub_header.style.position = 'absolute';
         }
     }
+
     // Call once to reposition stuff:
     window.onscroll();
+    window.onresize();
 }
