@@ -10,7 +10,6 @@ header {
 
 video {
 	object-fit: fill;
-	width: 100%;
 }
 
 #video-overlay {
@@ -63,7 +62,6 @@ h1 {
 }
 
 #sub-header {
-	background: rgba(0, 0, 0, 0.6);
 	position: absolute;
 	top: 0;
 	left: 0;
