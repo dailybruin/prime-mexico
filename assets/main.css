@@ -1,5 +1,5 @@
 body {
-	background: rgb(105,166,188);
+	background-color: #111;
 	color: #E6E6E6;
 	margin: 0;
 }
@@ -19,18 +19,7 @@ video {
 	width: 100%;
 }
 
-h1 {
-
-	font-family: 'Vollkorn', Georgia;
-	font: 400 90px 'Vollkorn';
-
-	margin: 0 auto 20px;
-
-	text-align: center;
-	text-shadow: 1px 1px 1px #666;
-}
-
-#container {
+#container, #sub-container {
 	background: rgb(105,166,188); /* Old browsers */
 	/* Consider replacing the IE rule with a static gradient image. This rule is infamously slow. */
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#69a6bc', endColorstr='#14335b', GradientType=0 ); /* IE6-9 */
@@ -41,18 +30,60 @@ h1 {
 	background:      -o-linear-gradient(top,       rgb(105,166,188) 0%, rgb(20,51,91) 100%); /* Opera 11.10+ */
 	background:         linear-gradient(to bottom, rgb(105,166,188) 0%, rgb(20,51,91) 100%);
 	position: absolute;
-	top: 400px; /* dynamically changed in main.js */
 	width: 100%;
+}
+
+#sub-container {
+	top: 600px; /* TODO: make this dynamically changed on window height change */
+}
+
+#sub-container {
+	margin-top: 500px;
+}
+
+h1 {
+	font-family: 'Lato', Georgia;
+	font-size: 90px;
+	font-weight: 300;
+
+	margin: 0 auto 100px;
+
+	text-align: center;
+	text-shadow: 1px 1px 1px #666;
+	text-transform: uppercase;
+}
+
+.pane {
+	height: 600px; /* Dynamically changed by JS */
+}
+
+.pane-center {
+	/* Dynamically changed with JS: */
+	margin-top: -300px; /* - Half */
+}
+
+#sub-header {
+	background: rgba(0, 0, 0, 0.6);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+h3 {
+	font-family: 'Vollkorn';
+	text-align: center;
+	font-size: 22px;
+	font-weight: 100;
+	line-height: 45px;
+	margin: auto 80px;
+	position: absolute;
+	top: 50%;
 }
 
 #main {
 	margin: 40px auto;
 	width: 800px;
-}
-
-h3 {
-	font-style: italic;
-	margin: auto;
 }
 
 canvas {
@@ -64,6 +95,7 @@ canvas {
 }
 
 p {
+	font-size: 18px;
 	/*need to customize margin so diver doesn't disappear*/
 	margin: 20px auto;
 }
