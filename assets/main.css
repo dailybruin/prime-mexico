@@ -1,4 +1,6 @@
 body {
+	background: rgb(105,166,188);
+	color: #E6E6E6;
 	margin: 0;
 }
 
@@ -12,12 +14,12 @@ video {
 }
 
 #video-overlay {
-	background: rgb(105,166,188);
-	opacity: 0; /* Changed by JS */
+	/*background: rgb (105, 166, 188);
+	background: rgba(105, 166, 188, 0.5);*/
 	position: absolute;
-	top: 0;
+	bottom: 0;
 	width: 100%;
-	height: 100%;
+	height: 50%;
 }
 
 #container {
@@ -30,7 +32,6 @@ video {
 	background:     -ms-linear-gradient(top,       rgb(105,166,188) 0%, rgb(20,51,91) 100%); /* IE10+ */
 	background:      -o-linear-gradient(top,       rgb(105,166,188) 0%, rgb(20,51,91) 100%); /* Opera 11.10+ */
 	background:         linear-gradient(to bottom, rgb(105,166,188) 0%, rgb(20,51,91) 100%);
-	color: #E6E6E6;
 	position: absolute;
 	top: 400px; /* dynamically changed in main.js */
 	width: 100%;
@@ -42,10 +43,12 @@ video {
 }
 
 h1 {
-	font-family: 'Vollkorn', Georgia;
 
+	font-family: 'Vollkorn', Georgia;
 	font: 400 90px/10px 'Vollkorn';
-	font-style: italic;
+
+	line-height: 70px;
+	margin: 80px auto 0;
 
 	text-align: center;
 	text-shadow: 1px 1px 1px #666;
