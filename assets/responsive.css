@@ -31,6 +31,12 @@
     video {
         display: none;
     }
+	
+	#photo-gallery {
+		overflow: hidden;
+		width: 100%;
+		float: none;
+	}
 }
 
 /* Landscape phone to portrait tablet */
@@ -45,6 +51,12 @@
     #chart_div {
         width: 90%;
     }
+	
+	#photo-gallery {
+		overflow: hidden;
+		width: 100%;
+		float: none;
+	}
 }
 
 /* Portrait tablet to landscape and desktop */
@@ -52,6 +64,9 @@
     #main {
         width: 720px;
     }
+	#photo-gallery {
+		margin-right: 0;
+	}
 }
 
 /* Large desktop */
