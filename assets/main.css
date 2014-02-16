@@ -93,6 +93,7 @@ div.gallery-img:hover {
 	opacity: 1;
 }
 #photo-gallery {
+	color: #ffffff;
 	float:right;
 	margin-right: -100px;
 }
