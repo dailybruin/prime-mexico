@@ -102,12 +102,15 @@ div.gallery-img div:hover {
 	opacity: 1;
 }
 #photo-gallery {
-	width: 245px;
+	width: 240px;
 	color: #ffffff;
 	float:right;
 	margin-right: -100px;
 	margin-left: 20px;
+	margin-bottom: 15px;
 	text-align: center;
+	padding: 15px 20px;
+	background-color: rgba(0,0,0, 0.4);
 }
 
 #photo-gallery p {
