@@ -72,18 +72,42 @@ p {
 	text-align: center;
 }
 
-img.inline {
+figure{
+	margin:0;
+	position: relative;
+	background-color: rgba(0,0,0, .4);
+}
+
+figure img {
 	display: block;
+	width: 100%;
+/*	border: 5px; */
 }
-
-img.inline.right {
+figure .image{
+	position:relative;
+}
+figure.right {
 	float: right;
-	margin-left: 1em;
+	margin-left: 20px;
+	margin-right: -100px;
+	width:360;
 }
 
-img.figcaption{
+figure figcaption{
+	margin: 1.0em 0 1.5em 0;
+	color: white;
 	text-align: center;
-	margin-top: 8px;
+
+}
+
+figure .credit {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding: 0 4px;
+	background-color: rgba(0,0,0, 0.25);
+	color: rgba(255,255,255, 0.75);
+	font-size:10;
 }
 
 div.gallery-img {
