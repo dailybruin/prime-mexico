@@ -21,15 +21,10 @@ var options ={
     isStacked: true,
     animation: {duration: 1000, easing: 'out'},
     backgroundColor: {fill:'transparent', stroke: '#000000', strokeWidth: 5},
-<<<<<<< HEAD
     height: 400, 
     width: '90%',
     seriesType:"bars",
     series: {2: {type: "line", color: "yellow", focusTarget: 'multiple'}},   
-=======
-    height: 400,
-    width: '90%'
->>>>>>> 381793b85238b941328817f6aec8df7ecf718516
 };
 
     var chart = new google.visualization.BarChart(document.getElementById('chart_div'));

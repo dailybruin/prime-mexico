@@ -82,6 +82,11 @@ img.inline.right {
 	margin-left: 1em;
 }
 
+img.figcaption{
+	text-align: center;
+	margin-top: 8px;
+}
+
 div.gallery-img {
 	width: 70px;
 	height: 100px;
