@@ -3,7 +3,9 @@ google.setOnLoadCallback(drawChart);
 
 function drawChart(){
     var data = google.visualization.arrayToDataTable([
-        ['Name','After','Before','DSafety recommendation', {type:'string',role:'tooltip'}],
+        ['Name','After','Before','DSafety recommendation',
+        {type:'string',role:'tooltip'}
+        ],
         //add reference
         ['Ada Beatriz',4.25,{v:5.25, f:'9.5'},10,'DPSM safety rec = 10 ppm'],
         ['Cristo',9,{v:18.75, f:'27.75'},10,'DPSM safety rec = 10 ppm'],
@@ -27,13 +29,13 @@ var options ={
         },
     isStacked: true,
     animation: {duration: 1000, easing: 'out'},
-    backgroundColor: {fill:'transparent', stroke: '#000000', strokeWidth: 5},
+    backgroundColor: {fill: 'transparent'},
     height: 400, 
     width: '90%',
     seriesType:"bars",
-    series: {2: {type: "line", color: "yellow", selectionMode: 'multiple', tooltip: {trigger:'selection'}, aggregationTarget: 'category'}},   
-    //not working yet
-    legend: {position: 'bottom', textStyle: {color:'white'}}
+    series: {2: {type: "line", color: "yellow",}},
+    legend: {position: 'bottom', textStyle: {color:'white'}},
+    tooltip: {trigger: 'none'}
 };
 
     var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
