@@ -75,19 +75,25 @@ h3 {
 	font-weight: 100;
 	line-height: 45px;
 	margin: auto 20%;
+	padding: 10px 0;
 	position: absolute;
 	top: 50%;
 }
+	h3#alt-sub-header {
+		display: none;
+	}
 
-#intro{
+.intro, .outro {
 	font-size: 28px;
-	padding-bottom: 2em;
+	line-height: 28px;
 }
+	.intro {
+		margin-bottom: 2em;
+	}
 
-#outro{
-	font-size: 28px;
-	padding-top: 1em;
-}
+	.outro {
+		margin-top: 1em;
+	}
 
 #main {
 	margin: 40px auto;
@@ -107,7 +113,7 @@ p {
 	font-size: 18px;
 	font-family: "Roboto", sans-serif;
 	/*need to customize margin so diver doesn't disappear*/
-	margin: 20px 50px;
+	margin: 20px;
 	text-align: justify;
 	font-weight: 100;
 }
