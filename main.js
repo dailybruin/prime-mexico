@@ -1,69 +1,74 @@
-// TODO: redo all this with jQuery (no, seriously, please clean this garbage up)
-
 window.onload = function() {
     var video = document.getElementById('video-yucatan'),
         video_overlay = document.getElementById('video-overlay'),
         container = document.getElementById('container');
 
+    var $window = $(window),
+        $header = $('#header'),
+        $sub_header = $('#sub-header'),
+        $sub_header_center = $('#sub-header-center'),
+        $video = $('#video-yucatan'),
+        $video_overlay = $('#video-overlay'),
+        $container = $('#container');
+
     var repositionContainer = function() {
-        if ($('video').css('display') !== 'none') {
-            container.style.top = video.offsetHeight;
-        }
+        $container.css(
+            'top', $window.height()
+        );
     };
     repositionContainer();
 
     var resizeElements = function() {
-        var client_height = document.body.clientHeight,
-            client_width = document.body.clientWidth;
+        var client_height = $window.height(),
+            client_width = $window.width();
 
         if (client_width >= 600) { // Because video disappears under 600px
-            $('.pane').height(client_height);
-
-            // Recenter .pane-centers if necessary:
-            var $pane_centers = $('.pane').children('.pane-center');
-                height = $pane_centers.height();
-            $pane_centers.css('marginTop', -height / 2);
-
-            video.style.width = client_width;
+            $video.width(client_width);
             var additional_width = 0;
-            while (video.offsetHeight < client_height) {
+            while ($video.height() < client_height) {
                 additional_width += 100;
-                video.style.width = client_width + additional_width;
+                $video.width(client_width + additional_width);
             }
 
-            $('header').height(client_height);
-        }
+            $video_overlay.width(client_width);
 
-        video_overlay.style.width = client_width;
+            $header.height(client_height);
+            $sub_header.height(client_height);
+
+            // Vertically center #sub-header-center:
+            var sub_header_center_height = $sub_header_center.height();
+            $sub_header_center.css('marginTop', -sub_header_center_height / 2);
+        }
     };
     resizeElements();
 
     window.onresize = function() {
         repositionContainer();
         resizeElements();
+
+        // TODO: Investigate if this is necessary
+        window.onscroll();
     }
 
     sub_header = document.getElementById('sub-header');
     window.onscroll = function() {
-        var alpha = 1.2 - (window.scrollY / video.offsetHeight); // A ratio of how far it has scrolled
-        video.style.opacity = alpha;
+        var scroll_position = $window.scrollTop(),
+            client_height = $window.height(),
+            scroll_ratio = scroll_position / client_height; // A ratio of how far it has scrolled
 
-        if ($(window).width() >= 600) {
-            video_overlay.style.bottom = window.scrollY * 1.333;
+        // Fade out video and #sub-header at certain thresholds:
+        $('#video-yucatan').css('opacity', 1.2 - scroll_ratio);
+        $('#sub-header').css('opacity', 2.4 - scroll_ratio);
 
-            if (window.scrollY >= $('header').height()) {
-                sub_header.style.position = 'fixed';
+        // The main header scrolls up faster:
+        $('#video-overlay').css('bottom', scroll_position * 1.333);
 
-                alpha = 2.8 - (window.scrollY / $(window).height());
-                $('#sub-header').css('opacity', alpha);
-            }
-            else {
-                sub_header.style.position = 'absolute';
-            }
-        }
+        // Lock #sub-header into fixed position once it has scrolled into place:
+        $('#sub-header').css(
+            'position', (scroll_position >= client_height) ? 'fixed' : 'absolute'
+        );
     }
 
     // Call once to reposition stuff:
-    window.onscroll();
     window.onresize();
 }
