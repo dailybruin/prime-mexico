@@ -23,11 +23,11 @@ video {
 	/* Consider replacing the IE rule with a static gradient image. This rule is infamously slow. */
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#69a6bc', endColorstr='#14335b', GradientType=0 ); /* IE6-9 */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(105,166,188)), color-stop(100%, rgb(20,51,91))); /* Chrome, Safari4+ */
-	background: -webkit-linear-gradient(top,       rgb(105,166,188) 0%, rgb(20,51,91) 100%); /* Chrome10+, Safari5.1+ */
-	background:    -moz-linear-gradient(top,       rgb(105,166,188) 0%, rgb(20,51,91) 100%); /* FF3.6+ */
-	background:     -ms-linear-gradient(top,       rgb(105,166,188) 0%, rgb(20,51,91) 100%); /* IE10+ */
-	background:      -o-linear-gradient(top,       rgb(105,166,188) 0%, rgb(20,51,91) 100%); /* Opera 11.10+ */
-	background:         linear-gradient(to bottom, rgb(105,166,188) 0%, rgb(20,51,91) 100%);
+	background: -webkit-linear-gradient(top,       rgb(74,158,188) 0%, rgb(20,51,91) 100%); /* Chrome10+, Safari5.1+ */
+	background:    -moz-linear-gradient(top,       rgb(74,158,188)  0%, rgb(20,51,91) 100%); /* FF3.6+ */
+	background:     -ms-linear-gradient(top,       rgb(74,158,188)  0%, rgb(20,51,91) 100%); /* IE10+ */
+	background:      -o-linear-gradient(top,       rgb(74,158,188)  0%, rgb(20,51,91) 100%); /* Opera 11.10+ */
+	background:         linear-gradient(to bottom, rgb(74,158,188)  0%, rgb(20,51,91) 100%);
 	position: absolute;
 	width: 100%;
 }
@@ -105,18 +105,28 @@ canvas {
 
 p {
 	font-size: 18px;
-	font-family: "Optima", "Optima MT", sans-serif;
+	font-family: "Roboto", sans-serif;
 	/*need to customize margin so diver doesn't disappear*/
 	margin: 20px 50px;
 	text-align: justify;
-}
-
-div.first {
 	font-weight: 100;
 }
 
-.divider {
+.quote{
+	font-size: 20px;
 	text-align: center;
+	font-weight: 300;
+	background-color: rgba(0,0,0,0.1);
+	padding: .8em;
+}
+
+.divider {
+	text-align: center;a
+}
+
+span.first {
+	font-weight: 500;
+	text-transform: uppercase;
 }
 
 figure{
@@ -158,7 +168,8 @@ figure figcaption{
 	padding: 1em;
 	color: white;
 	text-align: center;
-	font-family: "Optima", "Optima MT", sans-serif;
+	font-family: "Roboto", sans-serif;
+	font-weight: 100;
 }
 
 figure .credit {
@@ -166,10 +177,16 @@ figure .credit {
 	right: 0;
 	bottom: 0;
 	padding: 0 4px;
-	background-color: rgba(0,0,0, 0.25);
+	background-color: rgba(0,0,0, 0.35);
 	color: rgba(255,255,255, 0.75);
 	font-size:10;
-	font-family: "Optima", "Optima MT", sans-serif;
+	font-family: "Roboto", sans-serif;
+	font-weight: 100;
+}
+
+iframe {
+	width:769;
+	height:433;
 }
 
 div.gallery-img {
@@ -205,7 +222,7 @@ div.gallery-img div:hover {
 
 .gallery-img span {
 	font-size: 0.7em;
-	font-family: "Optima", "Optima MT", sans-serif;
+	font-family: "Roboto", sans-serif;
 }
 
 #chart_div {
