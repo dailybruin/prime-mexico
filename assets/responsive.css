@@ -67,6 +67,9 @@
 		float: none;
 		margin: 0;
 	}
+    figure.full{
+        width: 90%;
+    }
 }
 
 /* Landscape phone to portrait tablet */
@@ -85,6 +88,9 @@
 		float: none;
 		margin: 0;
 	}
+    figure.full{
+    width: 90%;
+    }
 }
 
 /* Portrait tablet to landscape and desktop */

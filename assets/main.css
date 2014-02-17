@@ -94,6 +94,7 @@ canvas {
 
 p {
 	font-size: 18px;
+	font-family: "Optima", "Optima MT", sans-serif;
 	/*need to customize margin so diver doesn't disappear*/
 	margin: 20px auto;
 }
@@ -102,18 +103,58 @@ p {
 	text-align: center;
 }
 
-img.inline {
+figure{
+	margin:0;
+	position: relative;
+	background-color: rgba(0,0,0, .4);
+}
+
+figure img {
 	display: block;
+	width: 100%;
+/*	border: 5px; */
 }
-
-img.inline.right {
+figure .image{
+	position:relative;
+}
+figure.right {
 	float: right;
-	margin-left: 1em;
+	margin-left: 20px;
+	margin-right: -100px;
 }
 
-img.figcaption{
+figure.left{
+	float: left;
+	margin-right: 20px;
+}
+
+figure.left, figure.right {
+	width:360;
+}
+
+figure.full{
+	width: 769px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 0.1em;
+}
+
+figure figcaption{
+	margin: 1em;
+	color: white;
 	text-align: center;
-	margin-top: 8px;
+	font-family: "Optima", "Optima MT", sans-serif;
+}
+
+figure .credit {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding: 0 4px;
+	background-color: rgba(0,0,0, 0.25);
+	color: rgba(255,255,255, 0.75);
+	font-size:10;
+	font-family: "Optima", "Optima MT", sans-serif;
 }
 
 div.gallery-img {
@@ -149,4 +190,8 @@ div.gallery-img div:hover {
 
 .gallery-img span {
 	font-size: 0.7em;
+}
+
+#chart_div {
+	background-color: rgba(0,0,0,0.4);
 }
