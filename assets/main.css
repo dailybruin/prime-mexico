@@ -81,6 +81,7 @@ h3 {
 
 #main {
 	margin: 40px auto;
+	padding-bottom: 50px;
 	width: 800px;
 }
 
@@ -139,7 +140,7 @@ figure.full{
 }
 
 figure figcaption{
-	margin: 1em;
+	padding: 1em;
 	color: white;
 	text-align: center;
 	font-family: "Optima", "Optima MT", sans-serif;
