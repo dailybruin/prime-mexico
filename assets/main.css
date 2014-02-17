@@ -91,6 +91,7 @@ h3 {
 
 #main {
 	margin: 40px auto;
+	padding-bottom: 50px;
 	width: 800px;
 }
 
@@ -154,7 +155,7 @@ figure.full{
 }
 
 figure figcaption{
-	margin: 1em;
+	padding: 1em;
 	color: white;
 	text-align: center;
 	font-family: "Optima", "Optima MT", sans-serif;
@@ -181,6 +182,7 @@ div.gallery-img div {
 	height: 100px;
 	overflow: hidden;
 	opacity: 0.90;
+	margin-bottom: 4px;
 }
 
 div.gallery-img div:hover {
@@ -198,7 +200,7 @@ div.gallery-img div:hover {
 }
 
 #photo-gallery p {
-	margin: 0;
+	margin: 5px;
 }
 
 .gallery-img span {

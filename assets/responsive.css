@@ -3,6 +3,10 @@
     #main {
         width: 90%;
     }
+
+    #photo-gallery {
+        padding: 15px;
+    }
 }
 
 @media (min-width: 481px) and (max-width: 599px) {
@@ -63,11 +67,17 @@
 
 	#photo-gallery {
 		overflow: hidden;
-		width: 100%;
+		width: auto;
 		float: none;
 		margin: 0;
 	}
-    figure.full{
+
+    figure.full {
+        width: 90%;
+    }
+    figure.right {
+        float: none;
+        margin: 0 auto;
         width: 90%;
     }
 }
@@ -84,12 +94,12 @@
 
 	#photo-gallery {
 		overflow: hidden;
-		width: 90%;
+        width: auto;
 		float: none;
 		margin: 0;
 	}
     figure.full{
-    width: 90%;
+        width: 90%;
     }
 }
 
@@ -101,6 +111,10 @@
 	#photo-gallery {
 		margin: 0;
 	}
+
+    figure.full{
+        width: 100%;
+    }
 }
 
 /* Large desktop */
