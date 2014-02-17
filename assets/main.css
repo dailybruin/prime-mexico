@@ -238,3 +238,12 @@ div.gallery-img div:hover {
 #gallery-quote {
 	width: 450px;
 }
+
+#diver {
+	position:absolute;
+	float:left;
+	width: 100px;
+	height: 100px;
+	margin-left: 50px;
+	/*padding: 50px;*/
+}
