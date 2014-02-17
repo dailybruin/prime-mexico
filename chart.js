@@ -33,7 +33,8 @@ function drawChart(){
 
 var options ={
     title: 'Carbon Monoxide (CO) levels on boats before and after the attachment',
-    titleTextStyle: {color: 'white', fontSize: 20, bold: true},
+    titleTextStyle: {color: 'white', fontSize: 20},
+    fontName: 'Roboto',
     hAxis: {title: 'CO parts per million (PPM)', 
             viewWindow: {max:70}, 
             textStyle: {color:'white'}, 
