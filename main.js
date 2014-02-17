@@ -5,10 +5,10 @@ window.onload = function() {
         video_overlay = document.getElementById('video-overlay'),
         container = document.getElementById('container');
 
-    var ratio = 1280 / 720; // video size
-
     var repositionContainer = function() {
-        container.style.top = video.offsetHeight;
+        if ($('video').css('display') !== 'none') {
+            container.style.top = video.offsetHeight;
+        }
     };
     repositionContainer();
 
@@ -16,21 +16,24 @@ window.onload = function() {
         var client_height = document.body.clientHeight,
             client_width = document.body.clientWidth;
 
-        $('.pane').height(client_height);
+        if (client_width >= 600) { // Because video disappears under 600px
+            $('.pane').height(client_height);
 
-        // Recenter .pane-centers if necessary:
-        var $pane_centers = $('.pane').children('.pane-center');
-            height = $pane_centers.height();
-        $pane_centers.css('marginTop', -height / 2);
+            // Recenter .pane-centers if necessary:
+            var $pane_centers = $('.pane').children('.pane-center');
+                height = $pane_centers.height();
+            $pane_centers.css('marginTop', -height / 2);
 
-        video.style.width = client_width;
-        var additional_width = 0;
-        while (video.offsetHeight < client_height) {
-            additional_width += 100;
-            video.style.width = client_width + additional_width;
+            video.style.width = client_width;
+            var additional_width = 0;
+            while (video.offsetHeight < client_height) {
+                additional_width += 100;
+                video.style.width = client_width + additional_width;
+            }
+
+            $('header').height(client_height);
         }
 
-        $('header').height(client_height);
         video_overlay.style.width = client_width;
     };
     resizeElements();
@@ -45,13 +48,15 @@ window.onload = function() {
         var alpha = 1.2 - (window.scrollY / video.offsetHeight); // A ratio of how far it has scrolled
         video.style.opacity = alpha;
 
-        video_overlay.style.bottom = window.scrollY * 1.333;
+        if ($(window).width() >= 600) {
+            video_overlay.style.bottom = window.scrollY * 1.333;
 
-        if (window.scrollY >= $('header').height()) {
-            sub_header.style.position = 'fixed';
-        }
-        else {
-            sub_header.style.position = 'absolute';
+            if (window.scrollY >= $('header').height()) {
+                sub_header.style.position = 'fixed';
+            }
+            else {
+                sub_header.style.position = 'absolute';
+            }
         }
     }
 
