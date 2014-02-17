@@ -120,7 +120,6 @@ figure .image{
 figure.right {
 	float: right;
 	margin-left: 20px;
-	margin-right: -100px;
 }
 
 figure.left{
@@ -176,7 +175,6 @@ div.gallery-img div:hover {
 	width: 240px;
 	color: #ffffff;
 	float:right;
-	margin-right: -100px;
 	margin-left: 20px;
 	margin-bottom: 15px;
 	text-align: center;
