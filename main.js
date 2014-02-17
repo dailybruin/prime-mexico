@@ -1,4 +1,4 @@
-window.onload = function() {
+$(document).ready(function() {
     var video = document.getElementById('video-yucatan'),
         video_overlay = document.getElementById('video-overlay'),
         container = document.getElementById('container');
@@ -71,4 +71,4 @@ window.onload = function() {
 
     // Call once to reposition stuff:
     window.onresize();
-}
+});
