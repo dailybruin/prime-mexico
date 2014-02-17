@@ -25,10 +25,10 @@ video {
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#69a6bc', endColorstr='#14335b', GradientType=0 ); /* IE6-9 */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(105,166,188)), color-stop(100%, rgb(20,51,91))); /* Chrome, Safari4+ */
 	background: -webkit-linear-gradient(top,       rgb(74,158,188) 0%, rgb(20,51,91) 100%); /* Chrome10+, Safari5.1+ */
-	background:    -moz-linear-gradient(top,       rgb(74,158,188)  0%, rgb(20,51,91) 100%); /* FF3.6+ */
-	background:     -ms-linear-gradient(top,       rgb(74,158,188)  0%, rgb(20,51,91) 100%); /* IE10+ */
-	background:      -o-linear-gradient(top,       rgb(74,158,188)  0%, rgb(20,51,91) 100%); /* Opera 11.10+ */
-	background:         linear-gradient(to bottom, rgb(74,158,188)  0%, rgb(20,51,91) 100%);
+	background: -moz-linear-gradient(top,       rgb(74,158,188)  0%, rgb(20,51,91) 100%); /* FF3.6+ */
+	background: -ms-linear-gradient(top,       rgb(74,158,188)  0%, rgb(20,51,91) 100%); /* IE10+ */
+	background: -o-linear-gradient(top,       rgb(74,158,188)  0%, rgb(20,51,91) 100%); /* Opera 11.10+ */
+	background: linear-gradient(to bottom, rgb(74,158,188)  0%, rgb(20,51,91) 100%);
 	position: absolute;
 	width: 100%;
 }
@@ -120,6 +120,7 @@ p {
 }
 
 .quote{
+	font-family: 'Optima';
 	font-size: 20px;
 	text-align: center;
 	font-weight: 300;
@@ -128,7 +129,23 @@ p {
 }
 
 .divider {
-	text-align: center;a
+	text-align: center;
+}
+
+#editor{
+	background-color: rgba(0,0,0,0.4);
+	padding: 1em;
+	margin-top:4em;
+}
+
+#note{
+	text-align: center;
+	font-weight: 500;
+	font-size: 22;
+}
+
+div p.notetxt{
+	font-style: italic;
 }
 
 span.first {
