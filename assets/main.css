@@ -79,6 +79,16 @@ h3 {
 	top: 50%;
 }
 
+#intro{
+	font-size: 28px;
+	padding-bottom: 2em;
+}
+
+#outro{
+	font-size: 28px;
+	padding-top: 1em;
+}
+
 #main {
 	margin: 40px auto;
 	padding-bottom: 50px;
@@ -97,7 +107,12 @@ p {
 	font-size: 18px;
 	font-family: "Optima", "Optima MT", sans-serif;
 	/*need to customize margin so diver doesn't disappear*/
-	margin: 20px auto;
+	margin: 20px 50px;
+	text-align: justify;
+}
+
+div.first {
+	font-weight: 100;
 }
 
 .divider {
