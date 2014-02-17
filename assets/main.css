@@ -166,6 +166,7 @@ div.gallery-img div {
 	height: 100px;
 	overflow: hidden;
 	opacity: 0.90;
+	margin-bottom: 4px;
 }
 
 div.gallery-img div:hover {
@@ -183,11 +184,12 @@ div.gallery-img div:hover {
 }
 
 #photo-gallery p {
-	margin: 0;
+	margin: 5px;
 }
 
 .gallery-img span {
 	font-size: 0.7em;
+	font-family: "Optima", "Optima MT", sans-serif;
 }
 
 #chart_div {
