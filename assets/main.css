@@ -125,14 +125,21 @@ figure.right {
 figure.left{
 	float: left;
 	margin-right: 20px;
+	float: center;
 }
 
 figure.left, figure.right {
 	width:360;
 }
 
+figure.full{
+	width: 769px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 figure figcaption{
-	margin: 1.0em 0 1.5em 0;
+	margin: 1em;
 	color: white;
 	text-align: center;
 
