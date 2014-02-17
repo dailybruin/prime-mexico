@@ -1,4 +1,4 @@
-// TODO: redo all this with jQuery
+// TODO: redo all this with jQuery (no, seriously, please clean this garbage up)
 
 window.onload = function() {
     var video = document.getElementById('video-yucatan'),
@@ -53,6 +53,9 @@ window.onload = function() {
 
             if (window.scrollY >= $('header').height()) {
                 sub_header.style.position = 'fixed';
+
+                alpha = 2.8 - (window.scrollY / $(window).height());
+                $('#sub-header').css('opacity', alpha);
             }
             else {
                 sub_header.style.position = 'absolute';
