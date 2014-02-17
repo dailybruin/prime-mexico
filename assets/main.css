@@ -234,3 +234,7 @@ div.gallery-img div:hover {
 #chart_div {
 	background-color: rgba(0,0,0,0.4);
 }
+
+#gallery-quote {
+	width: 450px;
+}
