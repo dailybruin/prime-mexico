@@ -90,6 +90,9 @@
         margin: 0 auto;
         width: 90%;
     }
+	#gallery-quote {
+		width: auto;
+	}
 }
 
 /* Landscape phone to portrait tablet */
@@ -115,6 +118,9 @@
     iframe {
         width: 90%;
     }
+	#gallery-quote {
+		width: auto;
+	}
 }
 
 /* Portrait tablet to landscape and desktop */
@@ -126,6 +132,10 @@
     figure.full{
         width: 100%;
     }
+	
+	#gallery-quote {
+		width: 365px;
+	}
 }
 
 /* Large desktop */
