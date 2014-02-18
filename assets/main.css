@@ -123,7 +123,7 @@ p {
 #editor {
 	background-color: rgba(0, 0, 0, 0.4);
 	padding: 1em;
-	margin: 4em auto;
+	margin:4em auto;
 }
 	#note {
 		font-size: 22px;
@@ -183,7 +183,7 @@ figure {
 	}
 	figure .credit {
 		font-family: "Roboto", Helvetica, Arial, sans-serif;
-		font-size:10px;
+		font-size: 10px;
 		font-weight: 300;
 		background-color: rgba(0, 0, 0, 0.35);
 		color: white;
@@ -201,8 +201,9 @@ iframe {
 #photo-gallery {
 	background-color: rgba(0, 0, 0, 0.4);
 	color: #fff;
-	float:right;
-	margin: 5em 0 5em 20px;
+	float: right;
+	margin-left: 20px;
+	margin-bottom: 15px;
 	padding: 15px 20px;
 	text-align: center;
 	width: 240px;
@@ -216,7 +217,7 @@ iframe {
 		text-align: center;
 	}
 	div.gallery-img {
-		float:left;
+		float: left;
 		margin: 0.3em;
 	}
 		div.gallery-img div {
@@ -286,7 +287,7 @@ img.right {
 
 #pgcredit {
 	background-color: rgba(0, 0, 0, 0.4);
-	margin: auto;
+	margin-top: 5em;
 	padding: 1em;
 }
 	#pgcredit p {
