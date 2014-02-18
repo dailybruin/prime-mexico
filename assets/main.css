@@ -299,29 +299,21 @@ canvas {
 	position:absolute;
 }
 
-img.reef {
+.reef {
 	opacity: 0.2;
-	position: absolute;
+	position: fixed;
 }
-	.reef.left, .reef.right {
-		float: none;
-		clear: none;
-	}
-		.reef.left {
-			left: 0;
-		}
-		.reef.right {
-			right: 0;
-		}
-/*
-img.left {
-	float: left;
-	clear: left;
+
+.reef.left, .reef.right {
+	float: none;
+	clear: none;
 }
-img.right {
-	float: right;
-	clear: right;
-}*/
+.reef.left {
+	left: 0;
+}
+.reef.right {
+	right: 0;
+}
 
 
 #pgcredit {

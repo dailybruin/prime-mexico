@@ -78,13 +78,25 @@ $(document).ready(function() {
 		var main_offset = $('#main').offset().top;
 			client_width = $(window).width();
 		
-		if( parseInt( $('#diver').css('top')) < - 550 )
+		if( parseInt( $('#diver').css('top')) < - 550 ) {
 			$('#diver').hide();
-		else
+			$('.reef').hide();
+		}
+		else {
 			$('#diver').fadeIn();
+			$('.reef').show();
+		}
 
 		$('#diver').css('margin-left', client_width/60);		
 		$('#diver').css('top', (scroll_position-main_offset-400)*1.02 + 'px');
+			
+		$('.reef').each( function( i, obj) {
+			var prevTop = parseInt( $(this).css('top'), 10);
+			if( prevTop < -500 )
+				$(this).css('top', client_height+500 + 'px');
+			else
+				$(this).css('top', prevTop-4 + 'px');
+		});	
     }
 
     // Call once to reposition stuff:
