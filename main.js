@@ -51,6 +51,17 @@ $(document).ready(function() {
     }
 
     sub_header = document.getElementById('sub-header');
+	
+	var inView = function isScrolledIntoView(elem) {
+		var docViewTop = $(window).scrollTop();
+		var docViewBottom = docViewTop + $(window).height();
+
+		var elemTop = $(elem).offset().top;
+		var elemBottom = elemTop + $(elem).height();
+
+		return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+	}
+	
     window.onscroll = function() {
         var scroll_position = $window.scrollTop(),
             client_height = $window.height(),
@@ -64,16 +75,13 @@ $(document).ready(function() {
         $('#video-overlay').css('bottom', scroll_position * 1.333);
 
         // Lock #sub-header into fixed position once it has scrolled into place:
+        $('#sub-header').css(
+            'position', (scroll_position >= client_height) ? 'fixed' : 'absolute'
+        );
+
         $sub_header.css('position', (scroll_position >= client_height) ? 'fixed' : 'absolute');
         $sub_header.css('top', -75 * scroll_ratio);
 
-    }
-	
-    // Call once to reposition stuff:
-    window.onresize();
-});
-
-document.onscroll = function() {
 		var mainOffset = $('#main').offset().top;
 		var windowWidth = window.innerWidth;
 		
@@ -84,4 +92,8 @@ document.onscroll = function() {
 
 		$('#diver').css('margin-left', (windowWidth)/50);		
 		$('#diver').css('top', (window.scrollY-mainOffset+100)*1.04 + 'px');
-}
+    }
+	
+    // Call once to reposition stuff:
+    window.onresize();
+});
