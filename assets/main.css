@@ -174,13 +174,12 @@ figure {
 			float: right;
 			margin-left: 20px;
 		}
-	figure.first {
+	/*figure.first {
 		margin-bottom: 30px;
-	}
+	}*/
 	figure.full {
 		margin-left: auto;
 		margin-right: auto;
-		padding-bottom: 0.1em;
 		width: 100%;
 	}
 	figure figcaption {
