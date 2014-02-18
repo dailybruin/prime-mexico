@@ -1,8 +1,4 @@
 $(document).ready(function() {
-    var video = document.getElementById('video-yucatan'),
-        video_overlay = document.getElementById('video-overlay'),
-        container = document.getElementById('container');
-
     var $window = $(window),
         $header = $('header'),
         $sub_header = $('#sub-header'),
@@ -10,7 +6,8 @@ $(document).ready(function() {
         $video = $('#video-yucatan'),
         $video_overlay = $('#video-overlay'),
         $container = $('#container'),
-        $diver = $('#diver');
+        $diver = $('#diver'),
+        last_scroll_position = 0;
 
     var repositionContainer = function() {
         $container.css(
@@ -86,13 +83,20 @@ $(document).ready(function() {
         $diver.css('margin-left', client_width / 60);
         $diver.css('top', (scroll_position - main_offset - 400) * 1.02);
 
-        $('.reef').each(function(i, obj) {
+        // Code from here on is buggy:
+        var direction = +1
+        if (scroll_position < last_scroll_position) {
+            direction = -1;
+        }
+        last_scroll_position = scroll_position;
+
+        $('.reef').each(function() {
             var prev_top = parseInt($(this).css('top'), 10);
             if (prev_top < -500) {
-                $(this).css('top', client_height + 500);
+                $(this).css('top', client_height + (direction * 500));
             }
             else {
-                $(this).css('top', prev_top - 4);
+                $(this).css('top', prev_top - (direction * 4));
             }
         });
     }

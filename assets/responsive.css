@@ -23,6 +23,7 @@
     .image iframe {
         height: 30%;
     }
+
     figure#map{
         width:80%;
     }
@@ -128,7 +129,7 @@
 	}
 
     .reef {
-        display: none;
+        display: none !important;
     }
 }
 
@@ -185,7 +186,7 @@
     }
 
     figure#map{
-        margin-top: 70px; 
+        margin-top: 60px;
         margin-bottom: 35px;
         width: 275px;
     }
@@ -245,6 +246,7 @@
         margin-top:0px;
     }
 }
+
 /* Large desktop */
 @media (min-width: 1200px) {
     figure#map{
