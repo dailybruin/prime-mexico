@@ -129,9 +129,10 @@ p {
 		margin: 10px 0 0;
 		text-align: center;
 	}
-	#editor p.note-text{
+	#editor p.notetxt{
 		font-style: italic;
 		margin: 10px 20px;
+		font-size:14px;
 	}
 
 span.first {
