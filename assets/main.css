@@ -148,7 +148,7 @@ p {
 #editor{
 	background-color: rgba(0,0,0,0.4);
 	padding: 1em;
-	margin:4em auto;
+	width: auto;
 }
 
 #note{
@@ -177,6 +177,7 @@ a{
 
 div p.notetxt{
 	font-style: italic;
+	font-size: 14px;
 }
 
 #pgcredit{
@@ -238,6 +239,15 @@ figure.full{
 	margin-left: auto;
 	margin-right: auto;
 	padding-bottom: 0.1em;
+}
+
+figure#map{
+	float: right;
+	width: 300px;
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background:none;
 }
 
 figure figcaption{
