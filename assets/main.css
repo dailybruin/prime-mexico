@@ -182,6 +182,10 @@ figure{
 		position:relative;
 	}
 
+	figure.first {
+		margin-bottom: 30px;
+	}
+
 	figure.left, figure.right {
 		width:360;
 	}
