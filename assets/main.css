@@ -320,8 +320,18 @@ div.gallery-img div:hover {
 
 img.reef {
 	opacity: 0.2;
-	position: relative;
+	position: absolute;
 }
+	.reef.left, .reef.right {
+		float: none;
+		clear: none;
+	}
+		.reef.left {
+			left: 0;
+		}
+		.reef.right {
+			right: 0;
+		}
 
 img.left {
 	float: left;
