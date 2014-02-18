@@ -92,7 +92,7 @@ header {
 
 #main {
 	margin: 40px auto;
-	padding-bottom: 50px;
+	padding-bottom: 150px;
 	width: 800px;
 }
 
@@ -160,10 +160,13 @@ div p.notetxt{
 }
 
 #pg-credit{
-	padding: 1em;
-	bottom:30px;
-	position:absolute;
-	z-index:100;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	bottom: 50px;
+	left: 0;
+	width: 100%;
+	z-index: 100;
 }
 
 #pg-credit p{
@@ -174,15 +177,19 @@ div p.notetxt{
 
 #sea-floor {
 	opacity: 0.6;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+#lobster {
+	opacity: 0.6;
+	position: absolute;
+	bottom: 157px;
+	left: 90px;
+	width: 80px;
 }
 
-#lobster {
-	width: 80px;
-	margin-left: 130px;
-	position: absolute;
-	bottom: 160px;
-	opacity: 0.6;
-}
 span.first {
 	font-weight: 500;
 	text-transform: uppercase;
