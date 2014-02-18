@@ -37,7 +37,7 @@ $(document).ready(function() {
 
             // Vertically center #sub-header-center:
             var sub_header_center_height = $sub_header_center.height();
-            $sub_header_center.css('marginTop', -sub_header_center_height / 2);
+            $sub_header_center.css('margin-top', -sub_header_center_height / 2);
         }
     };
     resizeElements();
@@ -51,17 +51,17 @@ $(document).ready(function() {
     }
 
     sub_header = document.getElementById('sub-header');
-	
-	var inView = function isScrolledIntoView(elem) {
-		var docViewTop = $(window).scrollTop();
-		var docViewBottom = docViewTop + $(window).height();
 
-		var elemTop = $(elem).offset().top;
-		var elemBottom = elemTop + $(elem).height();
+    var inView = function isScrolledIntoView(elem) {
+        var docViewTop = $(window).scrollTop();
+        var docViewBottom = docViewTop + $(window).height();
 
-		return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-	}
-	
+        var elemTop = $(elem).offset().top;
+        var elemBottom = elemTop + $(elem).height();
+
+        return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+    }
+
     window.onscroll = function() {
         var scroll_position = $window.scrollTop(),
             client_height = $window.height(),
@@ -69,7 +69,7 @@ $(document).ready(function() {
 
         // Fade out video and #sub-header at certain thresholds:
         $('#video-yucatan').css('opacity', 1.2 - scroll_ratio);
-        $('#sub-header').css('opacity', 2.8 - scroll_ratio);
+        $('#sub-header').css('opacity', 2.5 - scroll_ratio);
 
         // The main header scrolls up faster:
         $('#video-overlay').css('bottom', scroll_position * 1.333);
@@ -79,21 +79,26 @@ $(document).ready(function() {
             'position', (scroll_position >= client_height) ? 'fixed' : 'absolute'
         );
 
-        $sub_header.css('position', (scroll_position >= client_height) ? 'fixed' : 'absolute');
+        $sub_header.css(
+            'position', (scroll_position >= client_height) ? 'fixed' : 'absolute'
+        );
         $sub_header.css('top', -75 * scroll_ratio);
 
-		var mainOffset = $('#main').offset().top;
-		var windowWidth = window.innerWidth;
-		
-		if( parseInt( $('#diver').css('top')) < -100 )
-				$('#diver').hide();
-			else
-				$('#diver').fadeIn();
+        var main_offset = $('#main').offset().top,
+            client_width = $(window).width();
 
-		$('#diver').css('margin-left', (windowWidth)/50);		
-		$('#diver').css('top', (window.scrollY-mainOffset+100)*1.04 + 'px');
+        var diver_offset_top = parseInt($('#diver').css('top'));
+        if (diver_offset_top && diver_offset_top >= -100) {
+            $('#diver').show();
+        }
+        else {
+            $('#diver').hide();
+        }
+
+        $('#diver').css('margin-left', client_width / 50);
+        $('#diver').css('top', (scroll_position - main_offset + 100) * 1.04);
     }
-	
+
     // Call once to reposition stuff:
     window.onresize();
 });
