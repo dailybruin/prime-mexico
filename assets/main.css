@@ -281,3 +281,18 @@ div.gallery-img div:hover {
 	opacity: 0.4;
 	-webkit-transform: rotate(35deg);
 }
+
+img.reef {
+	opacity: 0.2;
+	position: relative;
+}
+
+img.left {
+	float: left;
+	clear: left;
+}
+
+img.right {
+	float: right;
+	clear: right;
+}
