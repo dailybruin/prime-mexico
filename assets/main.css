@@ -321,3 +321,20 @@ img.right {
 	left: 90px;
 	width: 80px;
 }
+
+p#endfirst{
+	display: block;
+	text-align: center;
+	margin-bottom: 3em;
+}
+
+p.start{
+	margin-top:3em;
+}
+
+p.end{
+	margin-bottom:3em;
+}
+p.end1{
+	margin-bottom:1em;
+}
