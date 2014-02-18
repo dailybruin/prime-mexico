@@ -200,6 +200,9 @@
 	#diver {
 		display: none !important;
 	}
+    figure#map{
+        margin-top:0px;
+    }
 }
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 770px) and (max-width: 979px) {
@@ -234,6 +237,9 @@
 	#gallery-quote {
 		width: 365px;
 	}
+    figure#map{
+        margin-top:20px;
+    }
 }
 
 /* Large desktop */
