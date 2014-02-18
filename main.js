@@ -87,11 +87,12 @@ $(document).ready(function() {
         var main_offset = $('#main').offset().top,
             client_width = $(window).width();
 
-        if (parseInt($('#diver').css('top')) < -100) {
-            $('#diver').hide();
+        var diver_offset_top = parseInt($('#diver').css('top'));
+        if (diver_offset_top && diver_offset_top >= -100) {
+            $('#diver').show();
         }
         else {
-            $('#diver').show();
+            $('#diver').hide();
         }
 
         $('#diver').css('margin-left', client_width / 50);

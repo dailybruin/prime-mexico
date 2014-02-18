@@ -307,12 +307,15 @@ div.gallery-img div:hover {
 }
 
 #diver {
+	display: none;
 	position:absolute;
 	float:left;
 	width: 100px;
 	height: 100px;
 	opacity: 0.4;
 	-webkit-transform: rotate(35deg);
+	   -moz-transform: rotate(35deg);
+	        transform: rotate(35deg);
 }
 
 img.reef {
