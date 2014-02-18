@@ -33,6 +33,7 @@
 
     #video-overlay {
         position: static;
+        width: 100% !important;
     }
         #video-overlay h1 {
             font-size: 60px;
@@ -61,14 +62,6 @@
         padding: 0;
         position: static;
     }
-
-    .intro, .outro {
-        font-size: 24px;
-        line-height: 24px;
-    }
-        .intro {
-            margin-bottom: 1em;
-        }
 
     #main {
         padding-top: 30px;
@@ -103,6 +96,22 @@
 
 /* Landscape phone to portrait tablet */
 @media (min-width: 600px) and (max-width: 769px) {
+    h3 {
+        font-size: 16px;
+        line-height: 24px;
+        margin: auto 2%;
+    }
+        .intro, .outro {
+            font-size: 20px;
+            line-height: 20px;
+        }
+            .intro {
+                margin-bottom: 15px;
+            }
+            .outro {
+                margin-top: 15px;
+            }
+
     #main {
         width: 580px;
     }
@@ -138,6 +147,22 @@
 }
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 770px) and (max-width: 979px) {
+    h3 {
+        font-size: 18px;
+        line-height: 32px;
+        margin: auto 5%;
+    }
+        .intro, .outro {
+            font-size: 24px;
+            line-height: 24px;
+        }
+            .intro {
+                margin-bottom: 15px;
+            }
+            .outro {
+                margin-top: 15px;
+            }
+
     #main {
         width: 720px;
     }
