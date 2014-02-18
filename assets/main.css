@@ -34,11 +34,8 @@ video {
 }
 
 #sub-container {
-	top: 600px; /* TODO: make this dynamically changed on window height change */
-}
-
-#sub-container {
 	margin-top: 500px;
+	top: 600px; /* TODO: make this dynamically changed on window height change */
 }
 
 h1 {
@@ -52,6 +49,19 @@ h1 {
 	text-shadow: 1px 1px 1px #666;
 	text-transform: uppercase;
 }
+
+#video-overlay h2 {
+	font-family: 'Lato', Georgia;
+	font-size: 30px;
+	font-weight: 500;
+	text-align: center;
+	text-shadow: 1px 1px 1px #666;
+	text-transform: uppercase;
+}
+	.byline-attribution {
+		font-size: 22px;
+		text-transform: lowercase;
+	}
 
 .pane {
 	height: 600px; /* Dynamically changed by JS */
