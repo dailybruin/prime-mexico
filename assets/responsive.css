@@ -11,6 +11,11 @@
         width: 90%;
     }
 
+    p {
+        margin: 10px;
+        text-align: left;
+    }
+
     #photo-gallery {
         padding: 15px;
     }
