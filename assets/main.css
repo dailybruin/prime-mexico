@@ -163,10 +163,11 @@ p {
 }
 
 #gallery-caption{
+	padding: auto;
+	margin: auto;
 	text-align: left;
 	font-size: 14px;
 	width: 240px;
-	display: relative;
 }
 
 a{

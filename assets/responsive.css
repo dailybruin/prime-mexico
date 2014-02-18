@@ -16,7 +16,7 @@
         text-align: left;
     }
 
-    #photo-gallery {
+    #photo-gallery #gallery-caption{
         padding: 15px;
     }
 
@@ -85,15 +85,14 @@
         margin: 0 auto;
     }
 
-	#photo-gallery {
+	#photo-gallery #gallery-caption{
 		overflow: hidden;
-		width: auto;
 		float: none;
 		margin: 30px 0 0;
 	}
 
-    #gallery-caption{
-        width: auto;
+    #photo-gallery{
+        width:auto;
     }
 
     iframe {
@@ -145,12 +144,15 @@
         width: 90%;
     }
 
-	#photo-gallery {
+	#photo-gallery #gallery-caption{
 		overflow: hidden;
-        width: auto;
 		float: none;
 		margin: 30px 0 0;
 	}
+
+    #photo-gallery{
+        width: auto;
+    }
     #gallery-quote {
         width: auto;
     }
