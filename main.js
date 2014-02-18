@@ -52,17 +52,8 @@ $(document).ready(function() {
 
     sub_header = document.getElementById('sub-header');
 
-    var inView = function isScrolledIntoView(elem) {
-        var docViewTop = $(window).scrollTop();
-        var docViewBottom = docViewTop + $(window).height();
-
-        var elemTop = $(elem).offset().top;
-        var elemBottom = elemTop + $(elem).height();
-
-        return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-    }
-
     window.onscroll = function() {
+		
         var scroll_position = $window.scrollTop(),
             client_height = $window.height(),
             scroll_ratio = scroll_position / client_height; // A ratio of how far it has scrolled
@@ -84,19 +75,16 @@ $(document).ready(function() {
         );
         $sub_header.css('top', -75 * scroll_ratio);
 
-        var main_offset = $('#main').offset().top,
-            client_width = $(window).width();
+		var main_offset = $('#main').offset().top;
+			client_width = $(window).width();
+		
+		if( parseInt( $('#diver').css('top')) < - 550 )
+			$('#diver').hide();
+		else
+			$('#diver').fadeIn();
 
-        var diver_offset_top = parseInt($('#diver').css('top'));
-        if (diver_offset_top && diver_offset_top >= -100) {
-            $('#diver').show();
-        }
-        else {
-            $('#diver').hide();
-        }
-
-        $('#diver').css('margin-left', client_width / 50);
-        $('#diver').css('top', (scroll_position - main_offset + 100) * 1.04);
+		$('#diver').css('margin-left', client_width/60);		
+		$('#diver').css('top', (scroll_position-main_offset-400)*1.02 + 'px');
     }
 
     // Call once to reposition stuff:

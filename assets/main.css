@@ -134,6 +134,55 @@ p {
 		margin: 10px 20px;
 	}
 
+#note{
+	text-align: center;
+	font-weight: 500;
+	font-size: 22px;
+}
+
+#gallery-title{
+	text-align: center;
+	font-size: 22px;
+	font-style: bold;
+}
+
+#gallery-caption{
+	text-align: left;
+	font-size: 14px;
+}
+
+a{
+	color: white;
+}
+
+div p.notetxt{
+	font-style: italic;
+}
+
+#pg-credit{
+	padding: 1em;
+	bottom:30px;
+	position:absolute;
+	z-index:100;
+}
+
+#pg-credit p{
+	text-align:center;
+	font-size: 14px;
+	margin: auto;
+}
+
+#sea-floor {
+	opacity: 0.6;
+}
+
+#lobster {
+	width: 80px;
+	margin-left: 130px;
+	position: absolute;
+	bottom: 160px;
+	opacity: 0.6;
+}
 span.first {
 	font-weight: 500;
 	text-transform: uppercase;
@@ -251,14 +300,11 @@ canvas {
 }
 
 #diver {
+	float:left;
+	width: 150px;
 	display: none;
-	width: 100px;
-	height: 100px;
 	opacity: 0.4;
 	position:absolute;
-	-webkit-transform: rotate(35deg);
-	   -moz-transform: rotate(35deg);
-	        transform: rotate(35deg);
 }
 
 img.reef {
@@ -275,15 +321,6 @@ img.reef {
 		.reef.right {
 			right: 0;
 		}
-
-img.left {
-	float: left;
-	clear: left;
-}
-img.right {
-	float: right;
-	clear: right;
-}
 
 #pgcredit {
 	background-color: rgba(0, 0, 0, 0.4);
