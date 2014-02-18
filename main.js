@@ -72,7 +72,7 @@ $(document).ready(function() {
         $('#sub-header').css('opacity', 2.5 - scroll_ratio);
 
         // The main header scrolls up faster:
-        $('#video-overlay').css('bottom', scroll_position * 1.333);
+        $('#video-overlay').css('top', scroll_position * -1.333);
 
         // Lock #sub-header into fixed position once it has scrolled into place:
         $('#sub-header').css(
