@@ -23,11 +23,23 @@
     .image iframe {
         height: 30%;
     }
+    figure#map{
+        width:80%;
+    }
+}
+
+@media (min-width: 474px) and (max-width: 480px){
+    figure#map{
+        width:80%;
+    }
 }
 
 @media (min-width: 481px) and (max-width: 599px) {
     #main {
         width: 440px;
+    }
+    figure#map{
+        width:80%;
     }
 }
 
@@ -170,6 +182,16 @@
 
     .reef {
         display: none;
+    }
+
+    figure#map{
+        margin-top: 60px; 
+        margin-bottom: 35px;
+        width: 275px;
+    }
+
+    #notetxt {
+        margin-right:10px;
     }
 }
 

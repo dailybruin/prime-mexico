@@ -193,6 +193,15 @@ figure {
 		bottom: 0;
 	}
 
+figure#map {
+	background: none;
+	float: right;
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	width: 300px;
+}
+
 iframe {
 	width: 769px;
 	height: 433px;
