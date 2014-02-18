@@ -165,6 +165,8 @@ p {
 #gallery-caption{
 	text-align: left;
 	font-size: 14px;
+	width: 240px;
+	display: relative;
 }
 
 a{
@@ -177,7 +179,7 @@ div p.notetxt{
 
 #pgcredit{
 	background-color: rgba(0,0,0,0.4);
-	margin: auto;
+	margin-top: 5em;
 	padding: 1em;
 }
 
