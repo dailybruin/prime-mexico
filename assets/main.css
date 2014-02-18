@@ -34,6 +34,14 @@ header {
 			text-shadow: 1px 1px 1px #666;
 			text-transform: uppercase;
 		}
+		
+		#video-overlay a {
+			font-family: "Vollkorn", Georgia, serif;
+			text-decoration: none;
+			text-shadow: 1px 1px 1px #666;
+			float: right;
+			margin: 5px;
+		}
 			.byline-attribution {
 				font-size: 22px;
 				text-transform: lowercase;
