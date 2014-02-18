@@ -92,7 +92,7 @@ header {
 
 #main {
 	margin: 40px auto;
-	padding-bottom: 150px;
+	padding-bottom: 200px;
 	width: 800px;
 }
 
@@ -121,7 +121,7 @@ p {
 #editor {
 	background-color: rgba(0, 0, 0, 0.4);
 	padding: 1em;
-	width: auto;
+	margin:4em auto;
 }
 	#note {
 		font-size: 22px;
@@ -133,63 +133,6 @@ p {
 		font-style: italic;
 		margin: 10px 20px;
 	}
-
-#note{
-	text-align: center;
-	font-weight: 500;
-	font-size: 22px;
-}
-
-#gallery-title{
-	text-align: center;
-	font-size: 22px;
-	font-style: bold;
-}
-
-#gallery-caption{
-	text-align: left;
-	font-size: 14px;
-}
-
-a{
-	color: white;
-}
-
-div p.notetxt{
-	font-style: italic;
-	font-size: 14px;
-}
-
-#pg-credit{
-	margin: 0;
-	padding: 0;
-	position: absolute;
-	bottom: 50px;
-	left: 0;
-	width: 100%;
-	z-index: 100;
-}
-
-#pg-credit p{
-	text-align:center;
-	font-size: 14px;
-	margin: auto;
-}
-
-#sea-floor {
-	opacity: 0.6;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-}
-#lobster {
-	opacity: 0.6;
-	position: absolute;
-	bottom: 157px;
-	left: 90px;
-	width: 80px;
-}
 
 span.first {
 	font-weight: 500;
@@ -204,7 +147,6 @@ figure {
 	margin: 0;
 	position: relative;
 }
-
 	figure img {
 		display: block;
 		width: 100%;
@@ -251,15 +193,6 @@ figure {
 		bottom: 0;
 	}
 
-	figure#map{
-	float: right;
-	width: 300px;
-	margin-left: 20px;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	background:none;
-}
-
 iframe {
 	width: 769px;
 	height: 433px;
@@ -302,6 +235,7 @@ iframe {
 			font-size: 0.7em;
 		}
 	#gallery-caption {
+		clear: both;
 		font-size: 14px;
 		text-align: left;
 	}
@@ -318,36 +252,66 @@ canvas {
 }
 
 #diver {
-	float:left;
-	width: 150px;
 	display: none;
+	width: 100px;
+	height: 100px;
 	opacity: 0.4;
 	position:absolute;
+	-webkit-transform: rotate(35deg);
+	   -moz-transform: rotate(35deg);
+	        transform: rotate(35deg);
 }
 
 .reef {
 	opacity: 0.2;
 	position: fixed;
 }
+	.reef.left, .reef.right {
+		float: none;
+		clear: none;
+	}
+		.reef.left {
+			left: 0;
+		}
+		.reef.right {
+			right: 0;
+		}
 
-.reef.left, .reef.right {
-	float: none;
-	clear: none;
+img.left {
+	float: left;
+	clear: left;
 }
-.reef.left {
+img.right {
+	float: right;
+	clear: right;
+}
+
+#pg-credit {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	bottom: 50px;
 	left: 0;
+	width: 100%;
+	z-index: 100;
 }
-.reef.right {
-	right: 0;
-}
-
-#pgcredit {
-	background-color: rgba(0, 0, 0, 0.4);
-	margin-top: 5em;
-	padding: 1em;
-}
-	#pgcredit p {
+	#pg-credit p {
 		font-size: 14px;
 		margin: auto;
 		text-align: center;
 	}
+
+#sea-floor {
+	opacity: 0.6;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+#lobster {
+	opacity: 0.6;
+	position: absolute;
+	bottom: 157px;
+	left: 90px;
+	width: 80px;
+}
