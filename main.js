@@ -37,7 +37,7 @@ $(document).ready(function() {
 
             // Vertically center #sub-header-center:
             var sub_header_center_height = $sub_header_center.height();
-            $sub_header_center.css('marginTop', -sub_header_center_height / 2);
+            $sub_header_center.css('margin-top', -sub_header_center_height / 2);
         }
     };
     resizeElements();
@@ -52,15 +52,15 @@ $(document).ready(function() {
 
     sub_header = document.getElementById('sub-header');
 
-	var inView = function isScrolledIntoView(elem) {
-		var docViewTop = $(window).scrollTop();
-		var docViewBottom = docViewTop + $(window).height();
+    var inView = function isScrolledIntoView(elem) {
+        var docViewTop = $(window).scrollTop();
+        var docViewBottom = docViewTop + $(window).height();
 
-		var elemTop = $(elem).offset().top;
-		var elemBottom = elemTop + $(elem).height();
+        var elemTop = $(elem).offset().top;
+        var elemBottom = elemTop + $(elem).height();
 
-		return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-	}
+        return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+    }
 
     window.onscroll = function() {
         var scroll_position = $window.scrollTop(),
@@ -84,16 +84,18 @@ $(document).ready(function() {
         );
         $sub_header.css('top', -75 * scroll_ratio);
 
-		var mainOffset = $('#main').offset().top;
-		var windowWidth = $(window).width();
+        var main_offset = $('#main').offset().top,
+            client_width = $(window).width();
 
-		if( parseInt( $('#diver').css('top')) < -100 )
-			$('#diver').hide();
-		else
-			$('#diver').fadeIn();
+        if (parseInt($('#diver').css('top')) < -100) {
+            $('#diver').hide();
+        }
+        else {
+            $('#diver').show();
+        }
 
-		$('#diver').css('margin-left', (windowWidth)/50);
-		$('#diver').css('top', (scroll_position - mainOffset + 100) * 1.04);
+        $('#diver').css('margin-left', client_width / 50);
+        $('#diver').css('top', (scroll_position - main_offset + 100) * 1.04);
     }
 
     // Call once to reposition stuff:
