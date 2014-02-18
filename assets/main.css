@@ -18,7 +18,7 @@ header {
 		width: 100%;
 	}
 		h1 {
-			font-family: 'Lato', Helvetica, Arial, sans-serif;
+			font-family: "Lato", Helvetica, Arial, sans-serif;
 			font-size: 90px;
 			font-weight: 300;
 			margin: 150px auto 80px;
@@ -27,7 +27,7 @@ header {
 			text-transform: uppercase;
 		}
 		#video-overlay h2 {
-			font-family: 'Lato', Helvetica, Arial, sans-serif;
+			font-family: "Lato", Helvetica, Arial, sans-serif;
 			font-size: 30px;
 			font-weight: 400;
 			text-align: center;
@@ -41,14 +41,12 @@ header {
 
 #container, #sub-container {
 	background: rgb(105,166,188); /* Old browsers */
-	/* Consider replacing the IE rule with a static gradient image. This rule is infamously slow. */
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#69a6bc', endColorstr='#14335b', GradientType=0 ); /* IE6-9 */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgb(105,166,188)), color-stop(100%, rgb(20,51,91))); /* Chrome, Safari4+ */
 	background: -webkit-linear-gradient(top,       rgb(74,158,188) 0%, rgb(20,51,91) 100%); /* Chrome10+, Safari5.1+ */
-	background: -moz-linear-gradient(top,       rgb(74,158,188)  0%, rgb(20,51,91) 100%); /* FF3.6+ */
-	background: -ms-linear-gradient(top,       rgb(74,158,188)  0%, rgb(20,51,91) 100%); /* IE10+ */
-	background: -o-linear-gradient(top,       rgb(74,158,188)  0%, rgb(20,51,91) 100%); /* Opera 11.10+ */
-	background: linear-gradient(to bottom, rgb(74,158,188)  0%, rgb(20,51,91) 100%);
+	background:    -moz-linear-gradient(top,       rgb(74,158,188) 0%, rgb(20,51,91) 100%); /* FF3.6+ */
+	background:     -ms-linear-gradient(top,       rgb(74,158,188) 0%, rgb(20,51,91) 100%); /* IE10+ */
+	background:      -o-linear-gradient(top,       rgb(74,158,188) 0%, rgb(20,51,91) 100%); /* Opera 11.10+ */
+	background:         linear-gradient(to bottom, rgb(74,158,188) 0%, rgb(20,51,91) 100%);
 	position: absolute;
 	top: 800px;
 	width: 100%;
@@ -68,10 +66,10 @@ header {
 		margin-top: -400px;
 	}
 		h3 {
-			font-family: 'Vollkorn', Georgia, serif;
+			font-family: "Vollkorn", Georgia, serif;
 			text-align: center;
 			font-size: 22px;
-			font-weight: 100;
+			font-weight: 400;
 			line-height: 36px;
 			margin: auto 10%;
 			padding: 0;
@@ -94,7 +92,7 @@ header {
 
 #main {
 	margin: 40px auto;
-	padding-bottom: 50px;
+	padding-bottom: 150px;
 	width: 800px;
 }
 
@@ -111,7 +109,7 @@ p {
 }
 
 .quote {
-	font-family: 'Optima', Helvetica, Arial, sans-serif;
+	font-family: "Optima", "Roboto", Helvetica, Arial, sans-serif;
 	font-size: 24px;
 	text-align: center;
 	font-weight: 300;
@@ -125,6 +123,16 @@ p {
 	padding: 1em;
 	margin:4em auto;
 }
+	#note {
+		font-size: 22px;
+		font-weight: 500;
+		margin: 10px 0 0;
+		text-align: center;
+	}
+	#editor p.note-text{
+		font-style: italic;
+		margin: 10px 20px;
+	}
 
 #note{
 	text-align: center;
@@ -152,10 +160,13 @@ div p.notetxt{
 }
 
 #pg-credit{
-	padding: 1em;
-	bottom:30px;
-	position:absolute;
-	z-index:100;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	bottom: 50px;
+	left: 0;
+	width: 100%;
+	z-index: 100;
 }
 
 #pg-credit p{
@@ -166,15 +177,19 @@ div p.notetxt{
 
 #sea-floor {
 	opacity: 0.6;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+#lobster {
+	opacity: 0.6;
+	position: absolute;
+	bottom: 157px;
+	left: 90px;
+	width: 80px;
 }
 
-#lobster {
-	width: 80px;
-	margin-left: 130px;
-	position: absolute;
-	bottom: 160px;
-	opacity: 0.6;
-}
 span.first {
 	font-weight: 500;
 	text-transform: uppercase;
@@ -314,7 +329,6 @@ canvas {
 .reef.right {
 	right: 0;
 }
-
 
 #pgcredit {
 	background-color: rgba(0, 0, 0, 0.4);

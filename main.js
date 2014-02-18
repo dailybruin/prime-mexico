@@ -9,7 +9,8 @@ $(document).ready(function() {
         $sub_header_center = $('#sub-header-center'),
         $video = $('#video-yucatan'),
         $video_overlay = $('#video-overlay'),
-        $container = $('#container');
+        $container = $('#container'),
+        $diver = $('#diver');
 
     var repositionContainer = function() {
         $container.css(
@@ -46,30 +47,24 @@ $(document).ready(function() {
         repositionContainer();
         resizeElements();
 
-        // TODO: Investigate if this is necessary
         window.onscroll();
     }
 
     sub_header = document.getElementById('sub-header');
 
     window.onscroll = function() {
-		
         var scroll_position = $window.scrollTop(),
             client_height = $window.height(),
             scroll_ratio = scroll_position / client_height; // A ratio of how far it has scrolled
 
-        // Fade out video and #sub-header at certain thresholds:
-        $('#video-yucatan').css('opacity', 1.2 - scroll_ratio);
-        $('#sub-header').css('opacity', 2.5 - scroll_ratio);
-
         // The main header scrolls up faster:
-        $('#video-overlay').css('top', scroll_position * -1.333);
+        $video_overlay.css('top', scroll_position * -1.333);
+
+        // Fade out video and #sub-header at certain thresholds:
+        $video.css('opacity', 1.2 - scroll_ratio);
+        $sub_header.css('opacity', 2.5 - scroll_ratio);
 
         // Lock #sub-header into fixed position once it has scrolled into place:
-        $('#sub-header').css(
-            'position', (scroll_position >= client_height) ? 'fixed' : 'absolute'
-        );
-
         $sub_header.css(
             'position', (scroll_position >= client_height) ? 'fixed' : 'absolute'
         );
