@@ -121,7 +121,7 @@ p {
 #editor {
 	background-color: rgba(0, 0, 0, 0.4);
 	padding: 1em;
-	margin:4em auto;
+	width: auto;
 }
 	#note {
 		font-size: 22px;
@@ -157,6 +157,7 @@ a{
 
 div p.notetxt{
 	font-style: italic;
+	font-size: 14px;
 }
 
 #pg-credit{
@@ -203,6 +204,7 @@ figure {
 	margin: 0;
 	position: relative;
 }
+
 	figure img {
 		display: block;
 		width: 100%;
@@ -248,6 +250,15 @@ figure {
 		right: 0;
 		bottom: 0;
 	}
+
+	figure#map{
+	float: right;
+	width: 300px;
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background:none;
+}
 
 iframe {
 	width: 769px;
