@@ -325,20 +325,21 @@ canvas {
 	position:absolute;
 }
 
-img.reef {
+.reef {
 	opacity: 0.2;
-	position: absolute;
+	position: fixed;
 }
-	.reef.left, .reef.right {
-		float: none;
-		clear: none;
-	}
-		.reef.left {
-			left: 0;
-		}
-		.reef.right {
-			right: 0;
-		}
+
+.reef.left, .reef.right {
+	float: none;
+	clear: none;
+}
+.reef.left {
+	left: 0;
+}
+.reef.right {
+	right: 0;
+}
 
 #pgcredit {
 	background-color: rgba(0, 0, 0, 0.4);
