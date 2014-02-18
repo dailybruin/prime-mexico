@@ -164,12 +164,13 @@ div p.notetxt{
 #pgcredit{
 	background-color: rgba(0,0,0,0.4);
 	margin: auto;
-	padding: 0.2em;
+	padding: 1em;
 }
 
 #pgcredit p{
 	text-align:center;
 	font-size: 14px;
+	margin: auto;
 }
 
 span.first {
@@ -186,15 +187,7 @@ figure{
 	position: relative;
 	background-color: rgba(0,0,0, .4);
 }
-	figure img {
-		display: block;
-		width: 100%;
-	}
-	figure .image {
-		position:relative;
-	}
 
-<<<<<<< HEAD
 figure img {
 	display: block;
 	width: 100%;
@@ -217,23 +210,10 @@ figure.left{
 figure.left, figure.right {
 	width:360px;
 }
-=======
+
 	figure.first {
 		margin-bottom: 30px;
 	}
->>>>>>> 878243ce56188e5656fec0bc7c45d2a7b6edce03
-
-	figure.left, figure.right {
-		width:360;
-	}
-		figure.left {
-			float: left;
-			margin-right: 20px;
-		}
-		figure.right {
-			float: right;
-			margin-left: 20px;
-		}
 
 	figure.full{
 		width: 769px;
@@ -250,7 +230,6 @@ figure.left, figure.right {
 		font-weight: 300;
 	}
 
-<<<<<<< HEAD
 figure .credit {
 	position: absolute;
 	right: 0;
@@ -262,19 +241,6 @@ figure .credit {
 	font-family: "Roboto", sans-serif;
 	font-weight: 300;
 }
-=======
-	figure .credit {
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		padding: 0 4px;
-		background-color: rgba(0,0,0, 0.35);
-		color: white;
-		font-size:10;
-		font-family: "Roboto", sans-serif;
-		font-weight: 300;
-	}
->>>>>>> 878243ce56188e5656fec0bc7c45d2a7b6edce03
 
 iframe {
 	width:769px;
@@ -298,14 +264,11 @@ div.gallery-img div:hover {
 	opacity: 1;
 }
 
-<<<<<<< HEAD
-=======
 .gallery-img span {
 	font-size: 0.7em;
 	font-family: "Roboto", sans-serif;
 }
 
->>>>>>> 878243ce56188e5656fec0bc7c45d2a7b6edce03
 #photo-gallery {
 	width: 240px;
 	color: #ffffff;
