@@ -15,7 +15,7 @@ video {
 
 #video-overlay {
 	position: absolute;
-	bottom: 0;
+	top: 0;
 	width: 100%;
 }
 
@@ -43,7 +43,7 @@ h1 {
 	font-size: 90px;
 	font-weight: 300;
 
-	margin: 0 auto 100px;
+	margin: 100px auto 80px;
 
 	text-align: center;
 	text-shadow: 1px 1px 1px #666;
