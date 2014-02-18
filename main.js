@@ -70,28 +70,31 @@ $(document).ready(function() {
         );
         $sub_header.css('top', -75 * scroll_ratio);
 
-		var main_offset = $('#main').offset().top;
-			client_width = $(window).width();
-		
-		if( parseInt( $('#diver').css('top')) < - 550 ) {
-			$('#diver').hide();
-			$('.reef').hide();
-		}
-		else {
-			$('#diver').fadeIn();
-			$('.reef').show();
-		}
+        var main_offset = $('#main').offset().top;
+            client_width = $(window).width();
 
-		$('#diver').css('margin-left', client_width/60);		
-		$('#diver').css('top', (scroll_position-main_offset-400)*1.02 + 'px');
-			
-		$('.reef').each( function( i, obj) {
-			var prevTop = parseInt( $(this).css('top'), 10);
-			if( prevTop < -500 )
-				$(this).css('top', client_height+500 + 'px');
-			else
-				$(this).css('top', prevTop-4 + 'px');
-		});	
+        var diver_offset_top = parseInt($diver.css('top'), 10);
+        if(diver_offset_top && diver_offset_top > -720 ) {
+            $diver.show();
+            $('.reef').show();
+        }
+        else {
+            $diver.hide();
+            $('.reef').hide();
+        }
+
+        $diver.css('margin-left', client_width / 60);
+        $diver.css('top', (scroll_position - main_offset - 400) * 1.02);
+
+        $('.reef').each(function(i, obj) {
+            var prev_top = parseInt($(this).css('top'), 10);
+            if (prev_top < -500) {
+                $(this).css('top', client_height + 500);
+            }
+            else {
+                $(this).css('top', prev_top - 4);
+            }
+        });
     }
 
     // Call once to reposition stuff:

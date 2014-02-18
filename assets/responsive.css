@@ -76,7 +76,8 @@
 
     #sub-container {
         margin: 0 auto;
-        position: static;
+        position: relative;
+        top: 0;
     }
 
     #sub-header {
@@ -98,15 +99,15 @@
         margin: 0 auto;
     }
 
-	#photo-gallery #gallery-caption{
-		overflow: hidden;
-		float: none;
-		margin: 30px 0 0;
-	}
-
-    #photo-gallery{
-        width:auto;
+    #photo-gallery {
+        margin-left: 0;
+        width: auto;
     }
+    	#photo-gallery #gallery-caption {
+    		overflow: hidden;
+    		float: none;
+    		margin: 30px 0 0;
+    	}
 
     iframe {
         width: 100%;
@@ -157,15 +158,15 @@
         width: 90%;
     }
 
-	#photo-gallery #gallery-caption{
-		overflow: hidden;
-		float: none;
-		margin: 30px 0 0;
-	}
-
-    #photo-gallery{
+    #photo-gallery {
+        margin-left: 0;
         width: auto;
     }
+    	#photo-gallery #gallery-caption{
+    		overflow: hidden;
+    		float: none;
+    		margin: 30px 0 0;
+    	}
     #gallery-quote {
         width: auto;
     }
