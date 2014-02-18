@@ -37,7 +37,7 @@ $(document).ready(function() {
 
             // Vertically center #sub-header-center:
             var sub_header_center_height = $sub_header_center.height();
-            $sub_header_center.css('marginTop', -sub_header_center_height / 2);
+            $sub_header_center.css('margin-top', -sub_header_center_height / 2);
         }
     };
     resizeElements();
@@ -51,7 +51,7 @@ $(document).ready(function() {
     }
 
     sub_header = document.getElementById('sub-header');
-	
+
     window.onscroll = function() {
 		
         var scroll_position = $window.scrollTop(),
@@ -60,31 +60,33 @@ $(document).ready(function() {
 
         // Fade out video and #sub-header at certain thresholds:
         $('#video-yucatan').css('opacity', 1.2 - scroll_ratio);
-        $('#sub-header').css('opacity', 2.8 - scroll_ratio);
+        $('#sub-header').css('opacity', 2.5 - scroll_ratio);
 
         // The main header scrolls up faster:
-        $('#video-overlay').css('bottom', scroll_position * 1.333);
+        $('#video-overlay').css('top', scroll_position * -1.333);
 
         // Lock #sub-header into fixed position once it has scrolled into place:
         $('#sub-header').css(
             'position', (scroll_position >= client_height) ? 'fixed' : 'absolute'
         );
 
-        $sub_header.css('position', (scroll_position >= client_height) ? 'fixed' : 'absolute');
+        $sub_header.css(
+            'position', (scroll_position >= client_height) ? 'fixed' : 'absolute'
+        );
         $sub_header.css('top', -75 * scroll_ratio);
 
-		var mainOffset = $('#main').offset().top;
-		var windowWidth = window.innerWidth;
+		var main_offset = $('#main').offset().top;
+			client_width = $(window).width();
 		
 		if( parseInt( $('#diver').css('top')) < - 550 )
 			$('#diver').hide();
 		else
 			$('#diver').fadeIn();
 
-		$('#diver').css('margin-left', (windowWidth)/60);		
-		$('#diver').css('top', (window.scrollY-mainOffset-400)*1.02 + 'px');
+		$('#diver').css('margin-left', client_width/60);		
+		$('#diver').css('top', (scroll_position-main_offset-400)*1.02 + 'px');
     }
-	
+
     // Call once to reposition stuff:
     window.onresize();
 });
