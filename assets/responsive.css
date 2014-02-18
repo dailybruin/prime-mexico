@@ -140,7 +140,7 @@
 }
 
 
-@media (max-width: 979px) {
+@media (max-width: 1200px) {
 	#diver {
 		display: none !important;
 	}

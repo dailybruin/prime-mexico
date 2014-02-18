@@ -165,18 +165,30 @@ div p.notetxt{
 	font-style: italic;
 }
 
-#pgcredit{
-	background-color: rgba(0,0,0,0.4);
-	margin: auto;
+#pg-credit{
 	padding: 1em;
+	bottom:30px;
+	position:absolute;
+	z-index:100;
 }
 
-#pgcredit p{
+#pg-credit p{
 	text-align:center;
 	font-size: 14px;
 	margin: auto;
 }
 
+#sea-floor {
+	opacity: 0.6;
+}
+
+#lobster {
+	width: 80px;
+	margin-left: 130px;
+	position: absolute;
+	bottom: 160px;
+	opacity: 0.6;
+}
 span.first {
 	font-weight: 500;
 	text-transform: uppercase;
@@ -299,10 +311,10 @@ div.gallery-img div:hover {
 #diver {
 	position:absolute;
 	float:left;
-	width: 100px;
-	height: 100px;
+	width: 150px;
+	height: 750px;
 	opacity: 0.4;
-	-webkit-transform: rotate(35deg);
+	/*-webkit-transform: rotate(35deg);*/
 }
 
 img.reef {
