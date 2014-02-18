@@ -1,5 +1,12 @@
 /* Landscape phones and down */
 @media (max-width: 480px) {
+    header #video-overlay h1 {
+        font-size: 50px;
+    }
+    header #video-overlay h2 {
+        font-size: 20px;
+    }
+
     #main {
         width: 90%;
     }
@@ -37,7 +44,12 @@
     }
         #video-overlay h1 {
             font-size: 60px;
-            padding-top: 80px;
+            margin-bottom: 15px;
+            padding-top: 30px;
+        }
+        #video-overlay h2 {
+            font-size: 25px;
+            margin: 0;
         }
 
     #container {
@@ -92,6 +104,10 @@
 	#gallery-quote {
 		width: auto;
 	}
+
+    .reef {
+        display: none;
+    }
 }
 
 /* Landscape phone to portrait tablet */
