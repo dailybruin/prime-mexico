@@ -70,19 +70,19 @@ $(document).ready(function() {
         );
         $sub_header.css('top', -75 * scroll_ratio);
 
-		var main_offset = $('#main').offset().top;
-			client_width = $(window).width();
+        var main_offset = $('#main').offset().top;
+            client_width = $(window).width();
 
         var diver_offset_top = parseInt($diver.css('top'));
-		if(diver_offset_top && diver_offset_top > -720 ) {
+        if(diver_offset_top && diver_offset_top > -720 ) {
             $diver.show();
         }
-		else {
-			$diver.hide();
+        else {
+            $diver.hide();
         }
 
-		$diver.css('margin-left', client_width / 60);
-		$diver.css('top', (scroll_position - main_offset - 400) * 1.02);
+        $diver.css('margin-left', client_width / 60);
+        $diver.css('top', (scroll_position - main_offset - 400) * 1.02);
     }
 
     // Call once to reposition stuff:
