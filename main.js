@@ -9,7 +9,8 @@ $(document).ready(function() {
         $sub_header_center = $('#sub-header-center'),
         $video = $('#video-yucatan'),
         $video_overlay = $('#video-overlay'),
-        $container = $('#container');
+        $container = $('#container'),
+        $diver = $('#diver');
 
     var repositionContainer = function() {
         $container.css(
@@ -46,30 +47,24 @@ $(document).ready(function() {
         repositionContainer();
         resizeElements();
 
-        // TODO: Investigate if this is necessary
         window.onscroll();
     }
 
     sub_header = document.getElementById('sub-header');
 
     window.onscroll = function() {
-		
         var scroll_position = $window.scrollTop(),
             client_height = $window.height(),
             scroll_ratio = scroll_position / client_height; // A ratio of how far it has scrolled
 
-        // Fade out video and #sub-header at certain thresholds:
-        $('#video-yucatan').css('opacity', 1.2 - scroll_ratio);
-        $('#sub-header').css('opacity', 2.5 - scroll_ratio);
-
         // The main header scrolls up faster:
-        $('#video-overlay').css('top', scroll_position * -1.333);
+        $video_overlay.css('top', scroll_position * -1.333);
+
+        // Fade out video and #sub-header at certain thresholds:
+        $video.css('opacity', 1.2 - scroll_ratio);
+        $sub_header.css('opacity', 2.5 - scroll_ratio);
 
         // Lock #sub-header into fixed position once it has scrolled into place:
-        $('#sub-header').css(
-            'position', (scroll_position >= client_height) ? 'fixed' : 'absolute'
-        );
-
         $sub_header.css(
             'position', (scroll_position >= client_height) ? 'fixed' : 'absolute'
         );
@@ -77,14 +72,17 @@ $(document).ready(function() {
 
 		var main_offset = $('#main').offset().top;
 			client_width = $(window).width();
-		
-		if( parseInt( $('#diver').css('top')) < - 550 )
-			$('#diver').hide();
-		else
-			$('#diver').fadeIn();
 
-		$('#diver').css('margin-left', client_width/60);		
-		$('#diver').css('top', (scroll_position-main_offset-400)*1.02 + 'px');
+        var diver_offset_top = parseInt($diver.css('top'));
+		if(diver_offset_top && diver_offset_top > -720 ) {
+            $diver.show();
+        }
+		else {
+			$diver.hide();
+        }
+
+		$diver.css('margin-left', client_width / 60);
+		$diver.css('top', (scroll_position - main_offset - 400) * 1.02);
     }
 
     // Call once to reposition stuff:
