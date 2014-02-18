@@ -352,7 +352,7 @@ p.end1{
 a#prime{
 	font-family: "Roboto", Helvetica, Arial, sans-serif;
 	background-color: rgba(0,0,0,0.2);
-	font-weight: 100;
-	margin: 3px;
-	padding: 3px;
+    font-size: 0.8em;
+	padding: 4px 8px;
+    float: left;
 }
