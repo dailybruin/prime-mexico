@@ -35,7 +35,7 @@
     header {
         background-image: url(img/water.jpg);
         background-repeat: no-repeat;
-        height: 300px !important; /* (I hate myself) Needed to counteract inline JS styling */
+        height: 300px !important;
         position: static;
     }
 
