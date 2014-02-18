@@ -4,7 +4,7 @@ $(document).ready(function() {
         container = document.getElementById('container');
 
     var $window = $(window),
-        $header = $('#header'),
+        $header = $('header'),
         $sub_header = $('#sub-header'),
         $sub_header_center = $('#sub-header-center'),
         $video = $('#video-yucatan'),
@@ -58,15 +58,15 @@ $(document).ready(function() {
 
         // Fade out video and #sub-header at certain thresholds:
         $('#video-yucatan').css('opacity', 1.2 - scroll_ratio);
-        $('#sub-header').css('opacity', 2.4 - scroll_ratio);
+        $('#sub-header').css('opacity', 2.8 - scroll_ratio);
 
         // The main header scrolls up faster:
         $('#video-overlay').css('bottom', scroll_position * 1.333);
 
         // Lock #sub-header into fixed position once it has scrolled into place:
-        $('#sub-header').css(
-            'position', (scroll_position >= client_height) ? 'fixed' : 'absolute'
-        );
+        $sub_header.css('position', (scroll_position >= client_height) ? 'fixed' : 'absolute');
+        $sub_header.css('top', -75 * scroll_ratio);
+
     }
 
     // Call once to reposition stuff:
