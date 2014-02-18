@@ -262,13 +262,9 @@ canvas {
 
 #diver {
 	display: none;
-	width: 100px;
-	height: 100px;
+	width: 150px;
 	opacity: 0.4;
-	position:absolute;
-	-webkit-transform: rotate(35deg);
-	   -moz-transform: rotate(35deg);
-	        transform: rotate(35deg);
+	position: absolute;
 }
 
 .reef {
