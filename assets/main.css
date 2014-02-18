@@ -345,3 +345,10 @@ p.end{
 p.end1{
 	margin-bottom:1em;
 }
+a#prime{
+	font-family: "Roboto", Helvetica, Arial, sans-serif;
+	background-color: rgba(0,0,0,0.2);
+	font-weight: 100;
+	margin: 3px;
+	padding: 3px;
+}
