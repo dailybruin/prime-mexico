@@ -131,6 +131,11 @@
 }
 
 
+@media (max-width: 979px) {
+	#diver {
+		display: none !important;
+	}
+}
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 770px) and (max-width: 979px) {
     #main {
@@ -147,13 +152,6 @@
 
 	#gallery-quote {
 		width: 365px;
-	}
-}
-
-
-@media (max-width: 1200px) {
-	#diver {
-		display: none !important;
 	}
 }
 

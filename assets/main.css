@@ -262,5 +262,6 @@ div.gallery-img div:hover {
 	float:left;
 	width: 100px;
 	height: 100px;
-	margin-left: 50px;
+	opacity: 0.4;
+	-webkit-transform: rotate(35deg);
 }

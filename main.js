@@ -68,27 +68,15 @@ window.onload = function() {
     window.onresize();
 }
 
-var diverRight = true;
 document.onscroll = function() {
-		var margin = $('#diver').css('margin-left');
 		var mainOffset = $('#main').offset().top;
+		var windowWidth = window.innerWidth;
 		
-		if ( parseInt(margin, 10) < 80 && diverRight ){
-			$('#diver').css('margin-left', parseInt(margin,10)+(window.scrollY%3)+ 'px');
-		}
-		else {
-		     diverRight = false;
-			$('#diver').css('margin-left', parseInt(margin,10)-(window.scrollY%3)+ 'px');
-			if( parseInt(margin, 10) < 30 ) {
-				diverRight = true;
-			}
-		}
-
-		$('#diver').css('top', (window.scrollY-mainOffset+100)*1.05 + 'px');
-		$('#diver').css('transform', "rotate(" + parseInt(margin,10)*0.3 + "deg)" );
-
 		if( parseInt( $('#diver').css('top')) < -100 )
-			$('#diver').hide();
-		else
-			$('#diver').fadeIn();
+				$('#diver').hide();
+			else
+				$('#diver').fadeIn();
+
+		$('#diver').css('margin-left', (windowWidth)/50);		
+		$('#diver').css('top', (window.scrollY-mainOffset+100)*1.04 + 'px');
 }
