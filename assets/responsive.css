@@ -185,7 +185,7 @@
     }
 
     figure#map{
-        margin-top: 60px; 
+        margin-top: 70px; 
         margin-bottom: 35px;
         width: 275px;
     }
@@ -200,10 +200,8 @@
 	#diver {
 		display: none !important;
 	}
-    figure#map{
-        margin-top:0px;
-    }
 }
+
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 770px) and (max-width: 979px) {
     h3 {
@@ -242,6 +240,11 @@
     }
 }
 
+@media (min-width:980px) and (max-width: 1999px) {
+    figure#map{
+        margin-top:0px;
+    }
+}
 /* Large desktop */
 @media (min-width: 1200px) {
     figure#map{
