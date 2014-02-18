@@ -112,6 +112,10 @@ a {
 	color: white;
 }
 
+.twitter-share-button {
+	float: right;
+}
+
 p {
 	font-family: "Roboto", Helvetica, Arial, sans-serif;
 	font-size: 18px;
