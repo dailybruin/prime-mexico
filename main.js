@@ -68,7 +68,20 @@ $(document).ready(function() {
         $sub_header.css('top', -75 * scroll_ratio);
 
     }
-
+	
     // Call once to reposition stuff:
     window.onresize();
 });
+
+document.onscroll = function() {
+		var mainOffset = $('#main').offset().top;
+		var windowWidth = window.innerWidth;
+		
+		if( parseInt( $('#diver').css('top')) < -100 )
+				$('#diver').hide();
+			else
+				$('#diver').fadeIn();
+
+		$('#diver').css('margin-left', (windowWidth)/50);		
+		$('#diver').css('top', (window.scrollY-mainOffset+100)*1.04 + 'px');
+}

@@ -139,6 +139,12 @@
 	}
 }
 
+
+@media (max-width: 979px) {
+	#diver {
+		display: none !important;
+	}
+}
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 770px) and (max-width: 979px) {
     h3 {

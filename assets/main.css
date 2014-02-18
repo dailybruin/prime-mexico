@@ -121,11 +121,12 @@ p {
 
 .quote{
 	font-family: 'Optima';
-	font-size: 20px;
+	font-size: 24px;
 	text-align: center;
 	font-weight: 300;
-	background-color: rgba(0,0,0,0.1);
+	/*background-color: rgba(0,0,0,0.1);*/
 	padding: .8em;
+	margin: auto 30px;
 }
 
 .divider {
@@ -135,7 +136,7 @@ p {
 #editor{
 	background-color: rgba(0,0,0,0.4);
 	padding: 1em;
-	margin-top:4em;
+	margin:4em auto;
 }
 
 #note{
@@ -148,13 +149,28 @@ div p.notetxt{
 	font-style: italic;
 }
 
+#pgcredit{
+	background-color: rgba(0,0,0,0.4);
+	margin: auto;
+	padding: 0.2em;
+}
+
+#pgcredit p{
+	text-align:center;
+	font-size: 14;
+}
+
 span.first {
 	font-weight: 500;
 	text-transform: uppercase;
 }
 
-figure {
-	margin:0;
+#one {
+	font-size: 24;
+}
+
+figure{
+	margin: 0;
 	position: relative;
 	background-color: rgba(0,0,0, .4);
 }
@@ -190,7 +206,7 @@ figure {
 		color: white;
 		text-align: center;
 		font-family: "Roboto", sans-serif;
-		font-weight: 100;
+		font-weight: 300;
 	}
 
 	figure .credit {
@@ -199,10 +215,10 @@ figure {
 		bottom: 0;
 		padding: 0 4px;
 		background-color: rgba(0,0,0, 0.35);
-		color: rgba(255,255,255, 0.75);
+		color: white;
 		font-size:10;
 		font-family: "Roboto", sans-serif;
-		font-weight: 100;
+		font-weight: 300;
 	}
 
 iframe {
@@ -252,4 +268,13 @@ div.gallery-img div:hover {
 
 #gallery-quote {
 	width: 450px;
+}
+
+#diver {
+	position:absolute;
+	float:left;
+	width: 100px;
+	height: 100px;
+	opacity: 0.4;
+	-webkit-transform: rotate(35deg);
 }
